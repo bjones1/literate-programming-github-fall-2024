@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CodeChat Editor overview
 
 The CodeChat Editor is a GUI-based programmer's word processor / Jupyter for
@@ -190,3 +191,8 @@ details.
 You should have received a [copy](LICENSE.html) of the GNU General Public
 License along with the CodeChat Editor. If not, see
 [https://www.gnu.org/licenses/](https://www.gnu.org/licenses/).
+=======
+# Click this link
+
+Click [here](https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1)
+>>>>>>> origin/kjb589-1
