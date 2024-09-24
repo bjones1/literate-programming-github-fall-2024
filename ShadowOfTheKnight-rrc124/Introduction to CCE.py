@@ -1,6 +1,6 @@
 import sys
 import math 
-
+# This was added to the rrc124 branch to satisfy part 2 of _Introduction to Git_ assignment.
 # # Shadows of the Knight
 # ## In this problem, Batman must find a bomb hidden in a building by using the least number of jumps.
 # My approach uses _binary search_ to minimize the number of guesses.
