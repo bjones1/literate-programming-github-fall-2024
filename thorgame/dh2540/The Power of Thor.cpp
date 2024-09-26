@@ -20,7 +20,7 @@
 // satisfied, Thor moves one cell in that direction and then the loop restarts  
 // This will go on until Thor has the reached The Light.
 
-// ![alt](The-Power-of-Thor-Block-Diagram.png)
+// ![alt](The-Power-of-Thor-Block-Diagram.jpg)
 // ***
 // ## *Provided Code*
 #include <iostream>
