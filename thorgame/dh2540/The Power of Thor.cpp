@@ -10,7 +10,7 @@
 // The programmer needs to create a loop that will guide Thor to The Light.  
 // The programmer is given all the variables and code required, meaning the  
 // only worry is the loop, specifically the while loop. 
-
+//
 // The solution that I came with after writing all the important information  
 // down was to create 8 if-else statements for each movement. Thor can  
 // only move in the North, East, South, West, Northeast, Northwest, Southeast, Southwest.  
