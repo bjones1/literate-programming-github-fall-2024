@@ -19,7 +19,7 @@
 // x coordinate and one for the y coordinate. When one of these coordinates is  
 // satisfied, Thor moves one cell in that direction and then the loop restarts  
 // This will go on until Thor has the reached The Light.
-
+// 
 // ![alt](The-Power-of-Thor-Block-Diagram.jpg)
 // ***
 // ## *Provided Code*
