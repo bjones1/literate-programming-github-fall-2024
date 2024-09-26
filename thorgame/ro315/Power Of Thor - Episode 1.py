@@ -78,3 +78,4 @@ while True:
 # This program ensures Thor moves optimally towards the light using the shortest
 # path. Thor stops when his position matches the light's coordinates or when he
 # runs out of moves.
+f418596b856ecb1d16dab0ad608b99af8710b0b0
