@@ -16,7 +16,7 @@
 # Prior to coding, a graphical representation of the problem.
 # ### _<span style="text-decoration: underline;">Visualization and Planning <img src="C:\Users\HP\Downloads\Fall 2024\Literate Programing" alt="">:</span>_
 
-# <img src="Drawing-2.jpg" alt="" width="625" height="715">
+# <img src="Drawing-1.jpg" alt="" width="625" height="715">
  
 # ### <span style="text-decoration: underline;"><em>Components of the Program:&nbsp;</em></span>       
  # 1. **Input**: The program takes the names and distances of  two enemies as inputs.
