@@ -1,10 +1,22 @@
 # # assignment1.py -- Python Solution for _"Shadow of the Knight - Episode 1"_
 
+# <mark> dw2360: I suggest adding what the game is about here for context.  
+# The objective is clear, but things to consider:  
+# - <mark> What is Shadow of the Knight?
+# - <mark> Why do I care about finding the bomb? (See picture below for example) </mark>
+# ![Story](story_shadow_of_knight.png)
+
+# <mark> dw2360: Consider adding a subheading here maybe like "**_Objective_**". </mark>
+
 # This Python program is designed to solve the puzzle
 # _[Shadow of the Knight - Episode 1](https://www.codingame.com/training/medium/shadows-of-the-knight-episode-1)_
-# from Codingame. The objective of this puzzle is to **guess the coordinate of a
+# from Codingame. The objective of this puzzle is to **guess the coordinates of a
 # bomb in a 2D array** by making guesses based on feedback provided in the form
 # of directional hints.
+
+# <mark> dw2360: The sentence above is redundant to the problem statement,
+# so consider adding the Shadow of the Knight URL to the problem statement and renaming it to "**_Objective_**".  
+# Also, I added an 's' to coordinate. </mark>
 
 # ## **Problem Statement**
 
@@ -15,8 +27,8 @@
 
 # ### **Rules**
 
-# The heat-signature device provides directions based on your current position:
-
+# The heat-signature device provides directions based on your current position:  
+# <mark> dw2360: You could put: '...based on your current position _and the general direction towards the bomb_' for clarity. </mark> 
 # - **U** (_Up_)
 # - **UR** (_Up-Right_)
 # - **R** (_Right_)
@@ -49,7 +61,8 @@
 # - **Position Update:** Move Batman to the midpoint of the updated search area.
 # - **Iteration:** Continue until the bomb's location is determined.
 
-# Below is a block diagram illustrating the approach:
+# Below is a block diagram illustrating the approach:  
+# <mark> dw2360: the '_if bomb found_' in the block diagram should be scooted over a bit for clarity. </mark>
 
 # ![Order of events](events.dot.svg)
 
@@ -58,7 +71,9 @@
 # - _What are intervals again?_
 #   [Interval (mathematics)](<https://en.wikipedia.org/wiki/Interval_(mathematics)>)
 # - _Binary search basics:_
-#   [GeeksforGeeks - Binary Search](https://www.geeksforgeeks.org/binary-search/)
+#   [GeeksforGeeks - Binary Search](https://www.geeksforgeeks.org/binary-search/)  
+
+# <mark> dw2360: **Helpful Links** could go to the bottom under a new section, _Additional Content_, to not ruin the flow of the Problem, Approach, & Solution layout. </mark>
 
 # ## **Solution**
 #
@@ -82,6 +97,7 @@
 # guess progressively narrows down the search area, efficiently converging on
 # the bomb's exact location.
 
+# <mark> dw2360: You could break this above paragraph into three parts for readablility, so maybe break at the '_By parsing these characters_' and '_After updating_' sentences to emphasize the steps taken throughout the process.</mark>
 # ### **Imports**
 
 ```python
@@ -91,25 +107,25 @@ import math
 
 # ### Initilization
 
-# #### w: width of the building. h: height of the building.
+# #### w: width of the building. h: height of the building.  <br><mark> dw2360: Instead of a period, you could use a comma after '_building_' and before '_h_' for uniformity. </mark></br>
 w, h = [int(i) for i in input().split()]
 
 # #### Maximum number of turns before game over.
 n = int(input())  
 
-# #### Starting coordinates for Batman
+# #### Starting coordinates for Batman <br><mark> dw2360: For uniformity, you could add a period(.) after each description as you did above. </mark></br>
 x0, y0 = [int(i) for i in input().split()]
 
 # #### Custom boundaries for search area
 xmin, xmax, ymin, ymax = 0, w - 1, 0, h - 1
 
-
+# <mark> dw2360: Consider eliminating one or two of these spaces for uniformity with the rest of the page. </mark>
 
 
 # ### Main Game Loop
 
 while True:
-# #### Direction of the bombs from Batman's current location
+# #### Direction of the bombs from Batman's current location <br><mark> dw2360: For uniformity, you could add a period(.) after each description as you did above. </mark></br>
     bomb_dir = input() 
 
 # #### Narrow the search range based on the direction
