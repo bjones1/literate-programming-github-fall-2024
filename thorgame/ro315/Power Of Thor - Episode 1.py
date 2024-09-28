@@ -9,16 +9,17 @@
 # light's position. Each turn, you need to print the direction</span>
 # <span class="hljs-comment">in which Thor should move: North (N), South (S),
 # East (E), or West (W). Thor's initial position is
-# defined</span>  <span class="hljs-comment">&nbsp;by <code>initial_tx</code>
-# and <code>initial_ty</code>, while the light is located at
-# <code>light_x</code> and <code>light_y</code>.</span>
+# defined</span>      <span class="hljs-comment">&nbsp;by
+# <code>initial_tx</code> and <code>initial_ty</code>, while the light is
+# located at <code>light_x</code> and <code>light_y</code>.</span>
 #
-# ### **Overview of the algorithm:** 
-#![Thor movement](thor.jpg)
-# light_x: the X position of the light of power light_y: the Y position of the
-# light of power initial_tx: Thor's starting X position initial_ty: Thor's
-# starting Y position
-light_x, light_y, initial_tx, initial_ty = [int(i) for i in input().split()]
+# ### **Overview of the algorithm:**
+#
+# ![Sketch](thor.jpg)
+
+# Read input from standard input
+input_data = sys.stdin.readline().split()
+light_x, light_y, initial_tx, initial_ty = [int(i) for i in input_data]
 import sys
 import math 
 # **Game loop** The loop calculates and prints the direction Thor must go on
