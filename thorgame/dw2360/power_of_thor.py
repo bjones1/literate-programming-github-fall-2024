@@ -1,10 +1,15 @@
 import sys
 import math
 
+# <mark>JJM702: (I would let the top heading be at the very top of the page and second level heading be for imports explaining built in and third party packages)</mark>
+
 # # Power of Thor Game: [Codinggame.com](https://www.codingame.com/ide/puzzle/power-of-thor-episode-1)
 #
 # ## **Game Objective**
 #
+
+# <mark>JJM702: (Good use of headings and clear topic sentences.Is *approach* the appropriate heading? It seems this is a detailed explanation of the events of the game. The approach should be your approach to solving this probelm and what you will do. This seems to be under *Fixes* which is to me, unclear.)</mark>
+
 # Use the compass directions to move Thor 1 cell in either direction to reach
 # the light of power.
 #
@@ -39,9 +44,14 @@ import math
 #
 # ### **Fixes**
 #
+
+# <mark>JJM702: (Included pictures should visualize important planning or problem instead of text. This photos text does howoever clearly explain your approach and key insight into solving the problem.)</mark>)
 # ![Logic](logic.png)
 #
 # ## **Solution**
+
+# <mark>JJM702: (Good use of meaningful variable names for positions like `light_x`, `initial_tx`, etc. These clearly indicate the purpose of each variable.)</mark>
+
 light_x, light_y, initial_tx, initial_ty = [int(i) for i in input().split()]
 
 # Game loop
@@ -50,11 +60,14 @@ while True:
 
     # Write an action using print To debug: print("Debug messages...",
     # file=sys.stderr, flush=True)
+
+# <mark>JJM702: (The logic in the following conditionals is somewhat confusing due to the use of a single `&` operator, which is a bitwise AND. In Python, use `and` for logical AND, or `&` for bitwise operations. Here, you likely meant to use `and`.)</mark>
+
     if initial_ty < light_y & initial_tx < light_x:
         initial_ty = initial_ty + 1
         initial_tx = initial_tx + 1
         print("SE")
-
+# <mark>JJM702: (Comments above code explaining what the code does.)</mark>
     elif initial_ty < light_y & initial_tx > light_x:
         initial_ty = initial_ty + 1
         initial_tx = initial_tx - 1
@@ -72,3 +85,5 @@ while True:
         initial_tx = initial_tx - 1
         print("W")
   
+# <mark>JJM702: (Code reads well in editor. For codeChat you could consider using bold, italic, and underline to denote specific aspects clearly. Lack of visual aids hurts understanding.)</mark>
+# <mark>JJM702: (Indentation and spacing in text could be improved. Grammatically it seems fine. Could use more custom description overall to explain your thoughts e.g. relay information about the game quickly and then introduce your problem solving approach and highlight key insights.)</mark>
