@@ -3,11 +3,9 @@
 ## Solutions
 
 1.  The Descent
-    1.  [Ben](The%20Descent-bab978/Program.c)
-    2.  [Ethan D.](The%20Descent%20-%20ESD109/ESD109descentCodeChat.py)
-    3.  [Ethan H.](TheDescent/esh207/HW1.cpp)
-    4.  [Matthew](TheDescent/mbs493/helloworld.cpp)
-    5.  [Sean](TheDescent/sbc278/CodingWithReflection_SeanBCorby.py)
+    1.  [Bryce](The%20Descent-bab978/Program.c)
+    2.  [Ethan](TheDescent/esh207/HW1.cpp)
+    3.  [Sean](TheDescent/sbc278/CodingWithReflection_SeanBCorby.py)
 2.  Ghost Legs
     1.  [Greyson](GhostLegs/glw169/bones_sol.py)
 3.  Onboarding
@@ -23,7 +21,7 @@
     1.  [Tate](Scrabble/tam670.py)
 6.  Shadows of the Knight
     1.  [Josh C.](ShadowOfTheKnight-jic12/ShadowsOfTheKnightSolution.py)
-    2.  [Josh M.](ShadowOfTheKnight-jjm702/assignment1-1.py)
+    2.  [Josh M.](ShadowOfTheKnight-jjm702/assignment1.py)
     3.  [Ronald](ShadowOfTheKnight-rrc124/Introduction%20to%20CCE.py)
     4.  [Lael](ShadowsOfTheKnight/all655/ShadowsOfTheKnight_all655.cpp)
 7.  Temperatures
