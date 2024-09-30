@@ -1,27 +1,37 @@
 # # Shadows of the Knight Solution
-
+#
 # ## Discussion
-
+#
 # ### Problem description
-
+#
 # This document describes a solution to a coding challenge on
 # [Codingame.com](Codingame.com). The challenge is called
 # [Shadows of the Knight Coding Challenge](https://www.codingame.com/training/medium/shadows-of-the-knight-episode-1).
-# The challenge is to efficiently use a binary search algorithm in two dimensions to locate the **Bomb** in a building.
-# Batman is given the direction of the bomb from his current position, and with each jump, he must reduce the search space to find the bomb within a limited number of moves.
+# The backstory of the challenge is that _Batman_ is looking for a **Bomb** in a
+# building. He is able to determine the direction of the **Bomb** from his
+# current location. _Batman_ has a limited number of jumps that he can make
+# before the **Bomb** detonates. To solve the challenge, _Batman_ must implement
+# a binary search algorithm to find the **Bomb** in time.
 
 # ## <span style="background-color: #ffffcc;"><strong>SBC:</strong></span>
 #
-# - The description now focuses on the binary search algorithm early on, improving clarity for the reader. The redundant explanation of the challenge was removed to keep the content concise.
-# - Additionally, by introducing the term **binary search in two dimensions**, the problem is defined more precisely, making the solution approach clearer from the beginning.
+# - **Clarity and Focus:** The opening paragraph does a good job of introducing
+#   the problem. However, the explanation could be more concise by reducing
+#   redundancy. For instance, mentioning "binary search" early on allows readers
+#   to quickly grasp the main challenge.
+# - **Recommendation:** Introduce a more specific phrase, like: "The challenge
+#   is to efficiently use a binary search algorithm in two dimensions to locate
+#   the bomb."
 
-# ### Reference Information
-# The problem requires Batman to jump to a new position based on binary search logic, halving the search space with each step in both horizontal and vertical directions.
+ ### Reference Information
+# 
+# The search algorithm starts with a full search space and reduces it by half in each iteration.
+# Batman starts in the middle of the current space, and based on the direction of the bomb,
+# the boundaries are updated. This approach guarantees the search converges quickly.
 
-# ## <span style="background-color: #ffffcc;"><strong>SBC:</strong></span>
-#
-# - The discussion of halving the search space is now included earlier in the comments to clarify how the solution relates to binary search.
-# - This enhances the clarity of how Batman’s movements correspond to the algorithm.
+# ### <span style="background-color: #ffffcc;"><strong>SBC:</strong></span> Recommendation:
+# Add a more concise explanation to describe how the two-dimensional binary search is being 
+# applied.
 #
 # ### Images
 #
@@ -42,101 +52,130 @@
 
 # ## <span style="background-color: #ffffcc;"><strong>SBC:</strong></span>
 #
-# - Added a docstring to this function to clearly explain the parameters and return value. This enhances readability and provides clear documentation for future users.
-# - The inline comments have been kept brief to maintain simplicity, focusing on key points such as calculating the midpoint and handling the bounds in the binary search.
+# - \*\*Image Naming Convention:\*\* The image source file name is excessively
+#   long and should be reduced. A concise and clear filename improves
+#   readability, such as \`Batman_start_pos.png\`. - \*\*Visual
+#   Representation:\*\* The starting position in the image lacks clear markers,
+#   making it difficult for readers to track Batman's position. -
+#   \*\*Recommendation:\*\* Add clear markers on the grid to show Batman's
+#   starting point and movements.
 
-# ## Solution
-# 
-# ### Explanation
+
+# Second Jump: In this image _Batman_ discovers that the **Bomb** is to his
+# lower left so he jumps halfway between the verical boundaries and halfway
+# between the horizontal bondaries. Then he detects that the **Bomb** is to his
+# upper right again. This means that the **Bomb** cannot be to the left or
+# bellow his current location. Now the left and bottom boundaries move in.
+
+
+
+
+# ### Basic Binary Search algorithm Discussion A basic
 #
-# The following solution simulates a binary search in both X and Y directions simultaneously, allowing Batman to efficiently locate the bomb in the building. A graphical representation with real-time animation using **Matplotlib** helps visualize Batman's movements and how the search area shrinks based on the bomb's direction.
-#
-# The animation is designed to run automatically with random bomb directions for demonstration purposes.
-
-# --- Standard and External Libraries ---
-import sys  # Standard library used for input/output operations.
-import math  # Standard library for mathematical operations.
-import random  # Standard library used for generating random directions.
-
-# External libraries for graphical plotting and animations.
-import matplotlib.pyplot as plt  
-from matplotlib.animation import FuncAnimation  
-
-# --- Local (User-Defined) Variables and Constants ---
-# These values initialize the dimensions of the map and Batman's initial starting position.
-mapWidth, mapHeight = 20, 20  # The width and height of the map (set to 20x20 for simplicity).
-jumpsUntilDetonation = 10  # Maximum number of jumps allowed before the bomb detonates.
-currentX, currentY = 10, 10  # Batman's initial starting position at the center of the map.
-
-# Initial boundaries for the search space.
-farLeftBound, farRightBound = 0, mapWidth - 1  # Horizontal bounds (left and right).
-farTopBound, farBottomBound = 0, mapHeight - 1  # Vertical bounds (top and bottom).
+# [Binary Search Algorithm](https://www.geeksforgeeks.org/binary-search/) is
+# able to efficiently find value in a sorted list. To do this, the algorithm
+# keeps up with an upper and lower bound. With each iteration through the loop,
+# the algorithm determines whether the value that it is looking for is to the
+# left or right of its current location. If the value is to the left of its
+# current location, then the algorithm moves the upper bound to the current
+# location -1. If the value is to the right of its current location, then the
+# algorithm moves the lower bound to the current location +1. After the bounds
+# have been adjusted, the current location is moved to halfway between the
+# bounds.
 
 # ## <span style="background-color: #ffffcc;"><strong>SBC:</strong></span>
-# - The initial boundaries define the entire map as Batman doesn't know the bomb's location initially.
+#
+# - **Educational Value:** While the description is accurate, it can benefit
+#   from a more in-depth explanation of why binary search is efficient.
+#   Specifically, mentioning that it reduces the search space by half with each
+#   step would improve the reader’s understanding.
+# - **Recommendation:** Add this line: "Binary search reduces the search space
+#   by half with each step, leading to logarithmic time complexity: O(log n)."
 
-# --- External Library: Matplotlib for Graphical Visualization ---
-# Initialize the plot for visualizing Batman's movements and the search area.
-fig, ax = plt.subplots()
-ax.set_xlim(0, mapWidth)  # Set x-axis limits.
-ax.set_ylim(0, mapHeight)  # Set y-axis limits.
+# #### Generic Binary Search algorithm
+def binarySearch(arr, low, high, x):
+    while low <= high:
+        mid = low + (high - low) // 2
+        if arr[mid] == x: return mid   # Check if x is present at mid
+        elif arr[mid] < x: low = mid + 1 # If x is greater, ignore left half
+        else: high = mid - 1 # If x is smaller, ignore right half
+    # If we reach here, then the element was not present
+    return -1
 
-# Plot Batman's initial position as a blue dot.
-batman_dot, = ax.plot(currentX, currentY, 'bo')
+# <span style="background-color: #ffffcc;"><strong>SBC:</strong></span>
+#
+# - **Clarity:** The comments are functional but can be improved by adding a
+#   docstring to clarify the function's purpose, input parameters, and return
+#   values.
+# - **Recommendation:** Include a docstring that explicitly states the
+#   function's purpose and input parameters.
 
-# Create a rectangle to represent the search area (initially covering the entire map).
-search_area = plt.Rectangle((0, 0), mapWidth, mapHeight, fill=None, edgecolor='r')
-ax.add_patch(search_area)
 
-# --- Simulated Bomb Directions ---
-# The bomb direction will be randomly selected from the following directions to simulate bomb movement.
-directions = ["R", "L", "U", "D", "UR", "UL", "DR", "DL"]  # Simulated directions.
+# ## Solution
+#
+# ### Discussion
+#
+# The following algorithm differs from the basic binary search because, it must
+# keep up with upper and lower bounds for both the X and Y axes. As this
+# algorithm runs, it simulatneously runs a binary search on both the X and Y
+# axes. The advantage of this is that when the boundraies are moved, the
+# algorithm does not need to consider values outside of the boundary.
 
-# --- Local (User-Defined) Functions ---
-# Function to update the plot during each frame of the animation.
-# This function recalculates Batman's position and updates the search area.
-def update_plot(frame, batman_dot, search_area):
-    # Simulate a random bomb direction.
-    bomb_dir = random.choice(directions)  
-    print(f"Bomb Direction: {bomb_dir}")  # Debugging: Print the bomb's simulated direction.
+# ## Code Implementation
 
-    # Adjust the horizontal bounds based on the bomb's direction.
+import sys
+import math
+
+#These lines of code set initial values for the variables of the program. 
+#mapWidth (int), mapHeight (int) represent the size of the map
+mapWidth, mapHeight = [int(i) for i in input().split()]
+
+#How many jumps Batman has to find the Bomb.
+jumpsUntilDetonation = int(input())  
+
+#Batman's current location on the map
+currentX, currentY = [int(i) for i in input().split()]
+
+#Bounds to narrow down Bomb location with each jump
+farLeftBound, farRightBound = 0, mapWidth 
+farBottomBound, farTopBound = mapHeight, 0
+
+# ### <span style="background-color: #ffffcc;"><strong>SBC:</strong></span> Clarification:
+# Make sure that variables like farLeftBound and farRightBound are well-explained.
+# These represent the dynamic limits within which the bomb is searched for.
+
+
+#With each iteration through the while loop, Batman is given the direction of the Bomb in relation to his current location. Directions are provided as (U, UR, R, DR, D, DL, L or UL). 
+#D means down
+#U means up
+#R means right
+#L means left
+#These can be combined also so DL would be down and left
+
+while True:
+    bomb_dir = input()  # the direction of the Bomb from Batman's current location 
+    print(bomb_dir, file=sys.stderr, flush=True)
+
+    #If the Bomb is to the right, move the left bound. If the Bomb is to the left move the right bound.
     if "R" in bomb_dir:
-        farLeftBound = currentX + 1  # Shift left bound when bomb is to the right.
-    elif "L" in bomb_dir:
-        farRightBound = currentX - 1  # Shift right bound when bomb is to the left.
+        farLeftBound = currentX+1
+    elif "L" in bomb_dir: 
+        farRightBound = currentX-1
+    
+    #If the Bomb is to down, move the top bound. If the Bomb is to up move the bottom bound.
+    if "D" in bomb_dir: 
+        farTopBound = currentY+1
+    elif "U" in bomb_dir: 
+        farBottomBound = currentY-1
 
-    # Adjust the vertical bounds based on the bomb's direction.
-    if "D" in bomb_dir:
-        farTopBound = currentY + 1  # Shift top bound when bomb is down.
-    elif "U" in bomb_dir:
-        farBottomBound = currentY - 1  # Shift bottom bound when bomb is up.
+# ### <span style="background-color: #ffffcc;"><strong>SBC:</strong></span> Clarification:
+# Ensure that comments explain the mid-point calculation, as this is a crucial part
+# of the binary search process. This helps the reader understand why the search space
+# is halved with each jump.
 
-    # Recalculate Batman's position as the midpoint between the updated bounds.
-    currentX = (farLeftBound + farRightBound) // 2
-    currentY = (farBottomBound + farTopBound) // 2
-
-    # Update Batman's position on the plot.
-    batman_dot.set_data(currentX, currentY)
-
-    # Update the search area (rectangle) on the plot.
-    search_area.set_bounds(farLeftBound, farBottomBound, 
-                           farRightBound - farLeftBound, 
-                           farTopBound - farBottomBound)
-
-    # Return updated elements to be redrawn.
-    return batman_dot, search_area
-
-# Helper function to initialize the plot before the animation starts.
-def init_plot(batman_dot, search_area):
-    batman_dot.set_data(currentX, currentY)
-    search_area.set_bounds(0, 0, mapWidth, mapHeight)  # Initialize the search area.
-    return batman_dot, search_area
-
-# --- External Library: Matplotlib Animation ---
-# The animation updates the plot in real-time, showing how Batman moves based on the simulated bomb directions.
-ani = FuncAnimation(fig, update_plot, frames=range(jumpsUntilDetonation), 
-                    init_func=lambda: init_plot(batman_dot, search_area), blit=True)
-
-# Display the animated plot.
-plt.show()
+        
+    #Batman now jumps to the halway point between the horizontal bounds and the halfway point between the vertical bounds.
+    currentX = farLeftBound + (farRightBound - farLeftBound) // 2 
+    currentY = farBottomBound + (farTopBound - farBottomBound) // 2
+    
+    print(currentX, currentY)
