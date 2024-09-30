@@ -108,11 +108,19 @@ while True:
 
 # ## **Post-Coding Reflection**
 #
-# The code implements a simple **linear search algorithm** that finds the
-# maximum value in a set of eight numbers (mountain heights). This algorithm
-# runs in **O(n)** time complexity, meaning that the time it takes to complete
-# the search grows linearly with the number of elements. Since we're only
-# processing eight mountains, this is optimal for the task at hand.
+# During the testing phase, I found that the linear search algorithm was simple
+# to implement and debug. Additionally, setting `max_height` to a lower value ensured
+# that all mountain heights were compared correctly from the start.
+#
+# **Additional Insights**:
+# - Another approach that could have been used is **binary search**, but since the mountain
+#   heights were not sorted, linear search remains the best option for this puzzle.
+#
+# - Given the small size of the dataset (only 8 mountains), this solution is optimal and efficient.
+#
+# **Final Thoughts**:
+# - By breaking down the problem step-by-step and reflecting on the process, the solution
+#   became more manageable, and the logical flow of the code was clearer.
 #
 # The **linear search algorithm** was chosen because:
 #
