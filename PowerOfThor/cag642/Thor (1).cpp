@@ -2,8 +2,9 @@
 
 // ## Setup:
 //
-// DH: I think you should keep your code together. Move this down to the rest of
-// your code. Have it after you explain the problem.
+// <span style="background-color: #f1c40f;">DH </span> : I think you should keep
+// your code together. Move this down to the rest of your code. Have it after
+// you explain the problem.
 
 // **First we want to include our libraries:**
 #include <iostream>
@@ -15,15 +16,16 @@ using namespace std;
 
 // ## Program:
 //
-// DH: Saying program again is very redundant. You could scrap that and replace
-// the heading with "Problem."
+// <span style="background-color: #f1c40f;">DH </span> : Saying program again is
+// very redundant. You could scrap that and replace the heading with "Problem."
 
 // ### Problem:
 
 // We are shown the initial problem
 // [here.](https://www.codingame.com/training/easy/power-of-thor-episode-1)
 //
-// DH: I can't see the screenshot.
+// <span style="background-color: #f1c40f;">DH </span> : I can't see the
+// screenshot.
 
 // ![Thor_Screenshot2](Thor_Screenshot2.jpg)
 
@@ -60,8 +62,9 @@ int main()
     // ### Main Loop:
 
     while (1) {
-        // DH: Indent your comments in while loop. The code needs to line up
-        // properly or it will fell off-putting.
+        // <span style="background-color: #f1c40f;">DH </span> : Indent your
+        // comments in while loop. The code needs to line up properly or it will
+        // fell off-putting.
       
 
 	// This was given in the problem. It declares remaining_turns as a variable and
@@ -90,7 +93,8 @@ int main()
 	// initial Y position (Which we know he does) then he will move right one step
 	// and add 1 to his initial X position. This goes on until Thor reaches his
 	// destination.
-        // DH: Decrease the indent for this line of code.
+        // <span style="background-color: #f1c40f;">DH </span> : Decrease the
+        // indent for this line of code.
 
            else if (light_x > initial_tx){
                 cout << "E" << endl;
@@ -108,10 +112,11 @@ int main()
 
 	// [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 
-    // DH: Overall, this meets the requirements. The variables have relevant
-    // names. There were no visible spelling mistakes, and the code reads well
-    // on both the IDE and Code Chat Editor. The paragraphs have a topic
-    // sentence, easy to follow, and clearly present the problem and the
-    // approach this programmer used to solve the problem.
+    // <span style="background-color: #f1c40f;">DH </span> : Overall, this meets
+    // the requirements. The variables have relevant names. There were no
+    // visible spelling mistakes, and the code reads well on both the IDE and
+    // Code Chat Editor. The paragraphs have a topic sentence, easy to follow,
+    // and clearly present the problem and the approach this programmer used to
+    // solve the problem.
     
 }
