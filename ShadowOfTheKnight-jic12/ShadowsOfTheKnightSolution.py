@@ -7,21 +7,32 @@
 # This document describes a solution to a coding challenge on
 # [Codingame.com](Codingame.com). The challenge is called
 # [Shadows of the Knight Coding Challenge](https://www.codingame.com/training/medium/shadows-of-the-knight-episode-1).
-# The challenge is to efficiently use a binary search algorithm in two dimensions to locate the **Bomb** in a building.
-# Batman is given the direction of the bomb from his current position, and with each jump, he must reduce the search space to find the bomb within a limited number of moves.
+# The challenge is to efficiently use a binary search algorithm in two
+# dimensions to locate the **Bomb** in a building. Batman is given the direction
+# of the bomb from his current position, and with each jump, he must reduce the
+# search space to find the bomb within a limited number of moves.
 
 # ## <span style="background-color: #ffffcc;"><strong>SBC:</strong></span>
 #
-# - The description now focuses on the binary search algorithm early on, improving clarity for the reader. The redundant explanation of the challenge was removed to keep the content concise.
-# - Additionally, by introducing the term **binary search in two dimensions**, the problem is defined more precisely, making the solution approach clearer from the beginning.
+# - The description now focuses on the binary search algorithm early on,
+#   improving clarity for the reader. The redundant explanation of the challenge
+#   was removed to keep the content concise.
+# - Additionally, by introducing the term **binary search in two dimensions**,
+#   the problem is defined more precisely, making the solution approach clearer
+#   from the beginning.
 
 # ### Reference Information
-# The problem requires Batman to jump to a new position based on binary search logic, halving the search space with each step in both horizontal and vertical directions.
+#
+# The problem requires Batman to jump to a new position based on binary search
+# logic, halving the search space with each step in both horizontal and vertical
+# directions.
 
 # ## <span style="background-color: #ffffcc;"><strong>SBC:</strong></span>
 #
-# - The discussion of halving the search space is now included earlier in the comments to clarify how the solution relates to binary search.
-# - This enhances the clarity of how Batman’s movements correspond to the algorithm.
+# - The discussion of halving the search space is now included earlier in the
+#   comments to clarify how the solution relates to binary search.
+# - This enhances the clarity of how Batman’s movements correspond to the
+#   algorithm.
 #
 # ### Images
 #
@@ -42,18 +53,27 @@
 
 # ## <span style="background-color: #ffffcc;"><strong>SBC:</strong></span>
 #
-# - Added a docstring to this function to clearly explain the parameters and return value. This enhances readability and provides clear documentation for future users.
-# - The inline comments have been kept brief to maintain simplicity, focusing on key points such as calculating the midpoint and handling the bounds in the binary search.
+# - Added a docstring to this function to clearly explain the parameters and
+#   return value. This enhances readability and provides clear documentation for
+#   future users.
+# - The inline comments have been kept brief to maintain simplicity, focusing on
+#   key points such as calculating the midpoint and handling the bounds in the
+#   binary search.
 
 # ## Solution
-# 
+#
 # ### Explanation
 #
-# The following solution simulates a binary search in both X and Y directions simultaneously, allowing Batman to efficiently locate the bomb in the building. A graphical representation with real-time animation using **Matplotlib** helps visualize Batman's movements and how the search area shrinks based on the bomb's direction.
+# The following solution simulates a binary search in both X and Y directions
+# simultaneously, allowing Batman to efficiently locate the bomb in the
+# building. A graphical representation with real-time animation using
+# **Matplotlib** helps visualize Batman's movements and how the search area
+# shrinks based on the bomb's direction.
 #
-# The animation is designed to run automatically with random bomb directions for demonstration purposes.
+# The animation is designed to run automatically with random bomb directions for
+# demonstration purposes.
 
-# --- Standard and External Libraries ---
+# \--- Standard and External Libraries ---
 import sys  # Standard library used for input/output operations.
 import math  # Standard library for mathematical operations.
 import random  # Standard library used for generating random directions.
@@ -62,8 +82,8 @@ import random  # Standard library used for generating random directions.
 import matplotlib.pyplot as plt  
 from matplotlib.animation import FuncAnimation  
 
-# --- Local (User-Defined) Variables and Constants ---
-# These values initialize the dimensions of the map and Batman's initial starting position.
+# \--- Local (User-Defined) Variables and Constants --- These values initialize
+# the dimensions of the map and Batman's initial starting position.
 mapWidth, mapHeight = 20, 20  # The width and height of the map (set to 20x20 for simplicity).
 jumpsUntilDetonation = 10  # Maximum number of jumps allowed before the bomb detonates.
 currentX, currentY = 10, 10  # Batman's initial starting position at the center of the map.
@@ -73,10 +93,12 @@ farLeftBound, farRightBound = 0, mapWidth - 1  # Horizontal bounds (left and rig
 farTopBound, farBottomBound = 0, mapHeight - 1  # Vertical bounds (top and bottom).
 
 # ## <span style="background-color: #ffffcc;"><strong>SBC:</strong></span>
-# - The initial boundaries define the entire map as Batman doesn't know the bomb's location initially.
+#
+# - The initial boundaries define the entire map as Batman doesn't know the
+#   bomb's location initially.
 
-# --- External Library: Matplotlib for Graphical Visualization ---
-# Initialize the plot for visualizing Batman's movements and the search area.
+# \--- External Library: Matplotlib for Graphical Visualization --- Initialize
+# the plot for visualizing Batman's movements and the search area.
 fig, ax = plt.subplots()
 ax.set_xlim(0, mapWidth)  # Set x-axis limits.
 ax.set_ylim(0, mapHeight)  # Set y-axis limits.
@@ -84,17 +106,18 @@ ax.set_ylim(0, mapHeight)  # Set y-axis limits.
 # Plot Batman's initial position as a blue dot.
 batman_dot, = ax.plot(currentX, currentY, 'bo')
 
-# Create a rectangle to represent the search area (initially covering the entire map).
+# Create a rectangle to represent the search area (initially covering the entire
+# map).
 search_area = plt.Rectangle((0, 0), mapWidth, mapHeight, fill=None, edgecolor='r')
 ax.add_patch(search_area)
 
-# --- Simulated Bomb Directions ---
-# The bomb direction will be randomly selected from the following directions to simulate bomb movement.
+# \--- Simulated Bomb Directions --- The bomb direction will be randomly
+# selected from the following directions to simulate bomb movement.
 directions = ["R", "L", "U", "D", "UR", "UL", "DR", "DL"]  # Simulated directions.
 
-# --- Local (User-Defined) Functions ---
-# Function to update the plot during each frame of the animation.
-# This function recalculates Batman's position and updates the search area.
+# \--- Local (User-Defined) Functions --- Function to update the plot during
+# each frame of the animation. This function recalculates Batman's position and
+# updates the search area.
 def update_plot(frame, batman_dot, search_area):
     # Simulate a random bomb direction.
     bomb_dir = random.choice(directions)  
@@ -133,8 +156,8 @@ def init_plot(batman_dot, search_area):
     search_area.set_bounds(0, 0, mapWidth, mapHeight)  # Initialize the search area.
     return batman_dot, search_area
 
-# --- External Library: Matplotlib Animation ---
-# The animation updates the plot in real-time, showing how Batman moves based on the simulated bomb directions.
+# \--- External Library: Matplotlib Animation --- The animation updates the plot
+# in real-time, showing how Batman moves based on the simulated bomb directions.
 ani = FuncAnimation(fig, update_plot, frames=range(jumpsUntilDetonation), 
                     init_func=lambda: init_plot(batman_dot, search_area), blit=True)
 
