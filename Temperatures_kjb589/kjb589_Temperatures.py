@@ -9,6 +9,8 @@
 # considered closest to zero (for instance, if the temperatures are -5 and 5,
 # then display 5).
 #
+# <mark >BAB:</mark> Good explanation I can't find anything to critize here.
+#
 # Try the puzzle yourself by clicking 
 # [here](https://www.codingame.com/ide/puzzle/temperatures).
 #
@@ -22,6 +24,9 @@
 # - Print the value of variable _closest_, where _closest_ is either:
 #   - 0, if no temperatures are provided
 #   - the temperature closest to 0, otherwise
+#
+# <mark >BAB:</mark> Ok these variable names could use some work. I'd recommend _N_ be named _numTemps
+# and _closest_ be named _closestTemp_ to make this easier to understand at a glance.
 #
 # ---
 #
@@ -65,3 +70,7 @@ for i in input().split():
             closest = curr
 
 print(closest)
+
+# <mark >BAB:</mark> Looks good overall I but I noticed a number of grammar errors in your explanations.
+# The grammar errors aren't major but they do make things akward to read.
+# The solution is explained and it is easy to read. Great work!
