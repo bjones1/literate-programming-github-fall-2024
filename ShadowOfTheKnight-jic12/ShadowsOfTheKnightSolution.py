@@ -23,7 +23,15 @@
 #   is to efficiently use a binary search algorithm in two dimensions to locate
 #   the bomb."
 
-# ### Reference Information
+ ### Reference Information
+# 
+# The search algorithm starts with a full search space and reduces it by half in each iteration.
+# Batman starts in the middle of the current space, and based on the direction of the bomb,
+# the boundaries are updated. This approach guarantees the search converges quickly.
+
+# ### <span style="background-color: #ffffcc;"><strong>SBC:</strong></span> Recommendation:
+# Add a more concise explanation to describe how the two-dimensional binary search is being 
+# applied.
 #
 # ### Images
 #
@@ -113,7 +121,7 @@ def binarySearch(arr, low, high, x):
 # axes. The advantage of this is that when the boundraies are moved, the
 # algorithm does not need to consider values outside of the boundary.
 
-# ### Code
+# ## Code Implementation
 
 import sys
 import math
@@ -132,13 +140,9 @@ currentX, currentY = [int(i) for i in input().split()]
 farLeftBound, farRightBound = 0, mapWidth 
 farBottomBound, farTopBound = mapHeight, 0
 
-# ## <span style="background-color: #ffffcc;"><strong>SBC:</strong></span>
-#
-# - **Variable Naming:** The variable names, such as `farLeftBound` and
-#   `farRightBound`, are clear and meaningful, but a brief comment explaining
-#   why these boundaries are initialized would be beneficial.
-# - **Recommendation:** Add a comment explaining that these bounds represent the
-#   entire map and will be adjusted with each jump.
+# ### <span style="background-color: #ffffcc;"><strong>SBC:</strong></span> Clarification:
+# Make sure that variables like farLeftBound and farRightBound are well-explained.
+# These represent the dynamic limits within which the bomb is searched for.
 
 
 #With each iteration through the while loop, Batman is given the direction of the Bomb in relation to his current location. Directions are provided as (U, UR, R, DR, D, DL, L or UL). 
@@ -164,12 +168,10 @@ while True:
     elif "U" in bomb_dir: 
         farBottomBound = currentY-1
 
-# ## <span style="background-color: #ffffcc;"><strong>SBC:</strong></span>
-#
-# - **Clarity of the Loop:** The loop structure is functional, but additional
-#   comments could clarify how the search space is halved in each direction.
-# - **Recommendation:** Add a comment explaining that Batman’s new position is
-#   recalculated as the midpoint between the adjusted bounds on both axes.
+# ### <span style="background-color: #ffffcc;"><strong>SBC:</strong></span> Clarification:
+# Ensure that comments explain the mid-point calculation, as this is a crucial part
+# of the binary search process. This helps the reader understand why the search space
+# is halved with each jump.
 
         
     #Batman now jumps to the halway point between the horizontal bounds and the halfway point between the vertical bounds.
