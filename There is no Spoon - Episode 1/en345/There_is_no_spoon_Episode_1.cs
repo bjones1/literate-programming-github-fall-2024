@@ -1,8 +1,14 @@
+// *RRC: I have completed the review of the following code. I found little to suggest changes on.  This reads very nicely on both VS and CCE.*<br>
+// *RRC: Line spacing issues can be fixed with < b r > times however many line breaks you want.*<br>
+// *RRC: My color coding is not working in CCE.  I am able to format and change the background color temporarily, but the changes do not stay.  I posted this question in Teams.*<br>
 // # A program that resolves the "There is no spoon - Episode 1" problem from [Coding game website](https://www.codingame.com/home)
-
+//
+// RRC: There was an extra code block at line 2. Removed with //
+//
 // ## The problem and the solution
-// <img src="There is no spoon Episode 1 solution image.png" style="width:500px;height:600px;margin:0"></img>
-
+//
+// <img src="There is no spoon Episode 1 solution image.png" style="width:500px;height:600px;margin:0">
+//
 // ## The implementation in C#
 using System;
 using System.Linq;
@@ -16,9 +22,10 @@ class Player
         {
           
             // ### Get Input Details
-
-            /* <p><i>Get input details includign width, height, and the lines. Use horizontal and vertical lines to store the input details for processing</i></p>
-            */
+            // <br> RRC: Misspelled word on the next line fixed <br><br>
+            /* _Get input details including width, height, and the lines. Use
+               horizontal and vertical lines to store the input details for
+               processing_ */
 
             int width = int.Parse(Console.ReadLine()); // the number of cells on the X axis 
             int height = int.Parse(Console.ReadLine()); // the number of cells on the Y axis 
@@ -36,14 +43,15 @@ class Player
                 foreach (var c in line.Trim(' ', '"'))
                 {
                     lines[i][widthIndex] = c;
-                    // <i><b>If the horizontal line wasn't already added, add one</b></i>
+                    // _**If the horizontal line wasn't already added, add
+                    // one**_
                     if (horizontalLines[i] == null)
                     {
                         horizontalLines[i] = new StringBuilder();
                     }
 
                     horizontalLines[i].Append(c);
-                    // <i><b>If the vertical line wasn't already added, add one</b></i>
+                    // _**If the vertical line wasn't already added, add one**_
                     if (verticalLines[widthIndex] == null)
                     {
                         verticalLines[widthIndex] = new StringBuilder();
@@ -57,10 +65,19 @@ class Player
             var verticalLIneStrings = verticalLines.Select(s => s.ToString().ToCharArray().ToList()).ToArray();
             
             // ### Process nodes
-
-            // <p><i>Process nodes line by line reading each node (character) in the line. If the node is not empty, find neighboring nodes (right and bottom). If the node is empty ignore it.</i></p>
-
-            // <p><i>Since the approach to find the next node uses C# List IndexOf method, keep track of the nodes found and don't use the node again for each line.</i></p>
+            //
+            // \
+            // RRC: There was an extra code block at line 65. Removed with //\
+            // \
+            // _Process nodes line by line reading each node (character) in the
+            // line. If the node is not empty, find neighboring nodes (right and
+            // bottom). If the node is empty ignore it._\
+            // \
+            // RRC: There was an extra code block at line 69. Removed with //\
+            // \
+            // _Since the approach to find the next node uses C# List IndexOf
+            // method, keep track of the nodes found and don't use the node
+            // again for each line._
             var processedNodes = new Dictionary<string, string>();
             for (var i = 0; i < lines.Count(); i++)
             {
@@ -73,7 +90,7 @@ class Player
 
                     if (horizontalLine[j] == '.')
                     {
-                        // **<i>Ignore nodes with .**</i>
+                        // **_Ignore nodes with ._**
                         continue; 
                     }
                     // **Next node in the line**
@@ -106,8 +123,14 @@ class Player
                             processedNodes.Add(node2, "");
                         }
                     }
-                    // <i>If no neighboring node found  -1 -1 will be used as the coordinate<i/>
-                    // <p><i>Output the node and neighboring nodes coordinates</i></p>
+                    // _If no neighboring node found -1 -1 will be used as the
+                    // coordinate_
+                    //
+                    // \_\_
+                    //
+                    // _Output the node and neighboring nodes coordinates_
+                    //
+                    // \_\_
                     Console.WriteLine($"{node} {nextNodeToRight} {nextNodeToBottom}");
                 }
             }
