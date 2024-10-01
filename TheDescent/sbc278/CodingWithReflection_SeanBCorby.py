@@ -1,14 +1,15 @@
 # <div align="center">
-#
+# 
 # # The Descent Puzzle Solution
-#
+# 
 # ## A Linear Search Approach to Identify the Tallest Mountain
-#
-# #### Introduction to the CodeChat Editor
-#
-# #### Written By: Sean B. Corby
-#
-# #### ECE 4793/6793 - Literate Programming in Software Development
+# 
+# ### Introduction to the CodeChat Editor
+# 
+# **Written By:** *Sean B. Corby*
+# 
+# **Course:** *ECE 4793/6793 - Literate Programming in Software Development*
+# 
 # </div>
 #
 # ## **Problem Breakdown**
@@ -39,14 +40,21 @@
 #     mountain heights are not pre-sorted.
 # 3.  It has a time complexity of **O(n)**, meaning it performs a single pass
 #     over all elements, which is efficient given the limited size of the input.
-
+#
 # ## **Flowchart Overview**
 #
-# Below is a flowchart that visually represents the algorithm used to solve the
-# problem:
+# The following flowchart visually outlines the steps taken to solve the puzzle.
+# It breaks down the initialization of variables, the iteration through the list of mountains,
+# the condition check for the tallest mountain, and the final output of the result.
 #
-# ![Flowchart of Solution](./final_solution_flowchart.png)
-
+# ![Flowchart showing the linear search algorithm steps: initializing variables, iterating through mountains, checking heights, and printing the index of the tallest mountain.](./final_solution_flowchart.png)
+#
+# ### **Explanation**:
+# - The flowchart begins by initializing the variables `max_height` and `max_index`.
+# - It then enters a loop that processes each mountain's height and compares it with the current maximum.
+# - The flowchart shows how the condition check updates the values if a taller mountain is found.
+# - Finally, the flowchart ends with the print statement that outputs the index of the tallest mountain.
+#
 # ## **Pre-Writing Reflections**
 #
 # Before writing the code, I recognized that the solution could be easily
@@ -108,11 +116,16 @@ while True:
 
 # ## **Post-Coding Reflection**
 #
-# The code implements a simple **linear search algorithm** that finds the
-# maximum value in a set of eight numbers (mountain heights). This algorithm
-# runs in **O(n)** time complexity, meaning that the time it takes to complete
-# the search grows linearly with the number of elements. Since we're only
-# processing eight mountains, this is optimal for the task at hand.
+# During the coding process, several key insights emerged that helped streamline the logic and improve accuracy:
+#
+# - **Initialization Matters**: Setting `max_height` to `-1` ensured that any real mountain height would be larger, making the logic flow smoother. This avoided potential errors in comparisons.
+# - **Efficient Looping**: Ensuring that every mountain was checked exactly once prevented any missed comparisons, which could have led to inaccurate results.
+# - **Simplicity of Linear Search**: Using a linear search allowed for easy identification and correction of any logical errors during testing.
+# 
+# **Reflecting on the process**:
+# - Visualizing the solution with a flowchart first made the coding process smoother.
+# - Breaking down the problem into steps—initialization, looping, condition checking, and output—clarified the solution and reduced debugging time.
+
 #
 # The **linear search algorithm** was chosen because:
 #
