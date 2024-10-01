@@ -12,6 +12,11 @@
 // using the character output (cout) function in c++. Below is a list of the\
 // characters output and their corresponding direction.
 //
+// <span style="background-color: #fbeeb8;">TAM </span> This is a good
+// description of the game. For someone that has never worked on this problem, I
+// think that I understand what the programmer needs to do to solve this
+// problem.
+//
 // - "N" for _north_
 // - "NE" for _northeast_
 // - "E" for _east_
@@ -25,7 +30,11 @@
 // ![Thor_map](thor_map.png)\
 // This image was obtained from
 // [codingame.com](https://www.codingame.com/ide/puzzle/power-of-thor-episode-1)
-
+//
+// <span style="background-color: #fbeeb8;">TAM</span> I appreciate you
+// inserting the image here. Seeing the map helps visualize the goal of the
+// game.
+//
 // ## My Approach
 //
 // For the problem of getting Thor to the light my solution is simple, compare\
@@ -62,6 +71,10 @@
 // **Image 2: Map Sketch**
 //
 // ![Map Sketch](map_sketch.png)
+//
+// <span style="background-color: #fbeeb8;">TM </span> I am glad that you
+// included this picture. I agree that this drawing makes it much easier to
+// understand than the map given from the game.
 //
 // ### _Beginning of auto generated code by the game_
 #include <iostream>
@@ -106,9 +119,13 @@ int main()
         // ## Straight Line Movement
         //
         // When either Thor's X or Y value matches one of the X or Y values of
-        // the light Thor needs to move in a straight line towards the light.
-        // These two sections are split into the logic to find North or South
-        // movement and then East or West movement.
+        // the light<span style="background-color: #fbeeb8;">,</span> Thor needs
+        // to move in a straight line towards the light. These two sections are
+        // split into the logic to find North or South movement and then East or
+        // West movement.
+        //
+        // <span style="background-color: #fbeeb8;">TAM </span> I added a comma
+        // between 'light' and 'Thor'
         //
         // ### North/South
         //
@@ -131,7 +148,12 @@ int main()
                 initial_ty --;
             }
         }
-
+        // TAM It is a little confusing when you use initial_tx/y as Thor's
+        // position, since it's no longer the _initial_ position. I would have
+        // set thor_x/y to the initial value of initial_tx/y. This way, we can
+        // distinguish between the initial position of Thor and the current
+        // position of Thor
+        //
         // ### East/West
         //
         // This if statement checks for the light's Y value matching Thor's Y
@@ -213,3 +235,14 @@ int main()
     
     }
 }
+// ## <span style="background-color: #fbeeb8;">Overall</span>
+//
+// Drake did a good job incorporating the CodeChat Editor on this project. There
+// is the slight variable name change that I would implement, but other than
+// that, this is very legible in both the CodeChat environment and my regular
+// IDE. I like how your comments allign with the code's indentation. This makes
+// the code easier to read in both environments. I thought it was a very good
+// idea to add images to the document. Both the map given by the game and the
+// map that Drake drew really helped me visualize how the game worked.
+//
+// I pasted this code into the actual game and it passed!
