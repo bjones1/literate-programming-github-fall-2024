@@ -10,7 +10,7 @@
    include parts to the main body of the code so that the coherency of the code
    can be saved.
 
-   <span style="background-color: #f1c40f;">RS</span>: The logic is presented
+   <span style="background-color: #f1c40f;">RS</span>: The logic is presened
    clear and easy to follow. */
 
 /* _the required includes for the program_ */
