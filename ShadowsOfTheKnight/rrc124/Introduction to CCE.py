@@ -54,6 +54,3 @@ while True:
 # bomb.** 
 #
 # ![Snapshot of Batman Finding Bombs](Game_Snapshot.png)
-
-# <span style="background-color: #FBEEB8">EN</span>: Great solution! It's simple and resolves the problem. The documentation also explains well the problem and the approach used in implementing the solution. 
-# <br/><span style="background-color: #FBEEB8">EN</span>: The only issue is that the referenced images weren't included in the repository.

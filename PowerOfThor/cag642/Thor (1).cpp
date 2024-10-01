@@ -17,7 +17,7 @@ using namespace std;
 // We are shown the initial problem
 // [here.](https://www.codingame.com/training/easy/power-of-thor-episode-1)
 
-// ![](Thor_Screenshot_Literate.jpg)
+// ![Thor_Screenshot2](Thor_Screenshot2.jpg)
 
 // In this final case, Thor begins at the top left corner of the screen with the
 // light of power at the bottom right. We are challenged to get Thor to the
