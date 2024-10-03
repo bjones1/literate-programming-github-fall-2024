@@ -58,7 +58,7 @@ int main()
 
 
         // A single line providing the move to be made: N NE E SE S SW W or NW
-        for (int i=0; i<sizeof(direction); i++) {    
+        for (int i=0; i<direction.size(); i++) {    
             cout << direction[i];
         }
         cout << endl;
