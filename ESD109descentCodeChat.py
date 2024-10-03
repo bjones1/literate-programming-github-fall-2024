@@ -9,11 +9,10 @@
 # the game where you are given inputs (the heights of the mountains) and where
 # you have to print an output (the index of the mountain to fire on) The inputs
 # you are given are automatically updated according to your last actions. There
-# are many different test cases for this that need to be passed, 5 in fact. In
-# order to pass each of these a culmination of the different types of loops and
-# if statements that may be needed has to include all of these cases. Below is a
-# simple diagram showing my process that I drew by hand when I first began to
-# solve this problem.\
+# are many dit need to be passed, 5 in fact. In order to pass each of these a
+# culmination of the different types of loops and if statements that may be
+# needed has to include all of these cases. Below is a simple diagram showing my
+# process that I drew by hand when I first began to solve this problem.\
 # \
 # <span style="color: #000000; background-color: #f1c40f;">all655:</span> The
 # topic sentence seems okay. You seem to know what you are talking about here,
