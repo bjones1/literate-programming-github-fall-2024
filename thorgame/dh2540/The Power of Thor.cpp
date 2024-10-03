@@ -3,41 +3,32 @@
 // ---
 //
 // [CodinGame](https://www.codingame.com/training/easy/power-of-thor-episode-1)
-// \*\*Insert my code here. \*\*
+// Here is the CodinGame this code is for.
 //
-// <mark> CAG:</mark> I would get rid of the "insert my code here part"
-//
-// <mark> CAG:</mark> I would add a heading titled "Problem"
+// ## Problem
 //
 // When I first opened this assignment, I looked at the description of the
-// project\
-// in order to understand what was being provided for me, and what I needed to
-// do.\
-// The description tells us that Thor needs to go to The Light to receive its
-// power.\
-// Thor and the Light are placed in two different coordinates in the x and y
-// plane.\
-// The programmer needs to create a loop that will guide Thor to The Light.\
-// The programmer is given all the variables and code required, meaning the\
-// only worry is the loop, specifically the while loop.
-
-// The solution that I came with after writing all the important information\
-// down was to create 8 if-else statements for each movement. Thor can\
-// only move in the North, East, South, West, Northeast, Northwest, Southeast,
-// Southwest.\
-// Thor has a limited number of turns to reach The Light and he can only move\
-// one cell each turn. Each if-else statement has two conditions, one for the\
-// x coordinate and one for the y coordinate. When one of these coordinates is\
-// satisfied, Thor moves one cell in that direction and then the loop restarts\
+// project in order to understand what was being provided for me, and what I
+// needed to do. The description tells us that Thor needs to go to The Light to
+// receive its power. Thor and the Light are placed in two different coordinates
+// in the x and y plane. The programmer needs to create a loop that will guide
+// Thor to The Light. The programmer is given all the variables and code
+// required, meaning the only worry is the loop, specifically the while loop.
+//
+// The solution that I came with after writing all the important information
+// down was to create 8 if-else statements for each movement. Thor can only move
+// in the North, East, South, West, Northeast, Northwest, Southeast, Southwest.
+// Thor has a limited number of turns to reach The Light and he can only move
+// one cell each turn. Each if-else statement has two conditions, one for the x
+// coordinate and one for the y coordinate. When one of these coordinates is
+// satisfied, Thor moves one cell in that direction and then the loop restarts
 // This will go on until Thor has the reached The Light.
 
 // ![alt](The-Power-of-Thor-Block-Diagram.jpg)
 //
 // ---
 //
-// ## _Provided Code_
-//
-// <mark> CAG:</mark> I would detail what each part of the given code does even though it was given.
+// ### _Provided Code_
 #include <iostream>
 #include <string>
 #include <vector>
@@ -53,23 +44,24 @@ using namespace std;
 **/
 
 int main() { 
+    // These are the four given variables.
     int light_x; // the X position of the light of power
     int light_y; // the Y position of the light of power
     int initial_tx; // Thor's starting X position
     int initial_ty; // Thor's starting Y position
     cin >> light_x >> light_y >> initial_tx >> initial_ty; cin.ignore();
 
-    // game loop
+    // Here you are given a number of turns that thor can have to reach the
+    // light. This while loop will continue until either the turns run out or
+    // thor reaches the light.
     while (1) {
         int remaining_turns; // The remaining amount of turns Thor can move. Do not remove this line.
         cin >> remaining_turns; cin.ignore();
 
         // Write an action using cout. DON'T FORGET THE "<< endl" To debug: cerr
         // << "Debug messages..." << endl;
-
-        // ## _My Code_
         //
-        // <mark> CAG:</mark> I would personally add a space between each doc block and the code, but that is personal preference
+        // ### _My Code_
         //
         // If Thor's x and y coordinates are greater than the light's x and y
         // coordinates, move Thor northwest by one.
@@ -136,7 +128,9 @@ int main() {
         }
     }
 }
-// <mark> CAG:</mark> I Think the program in the IDE and in Codechat both read very well.
-// I might would consider adding a resources section at the bottom but that again is just preference.
-// The main change I would make would be to put your code into the given code and present it as 
-// one cohesive program.
+
+// Helpful Links
+//
+// [C++ Cheat Sheet](https://www.codewithharry.com/blogpost/cpp-cheatsheet/) 
+//
+// [Markdown Help](https://www.markdownguide.org/cheat-sheet/)
