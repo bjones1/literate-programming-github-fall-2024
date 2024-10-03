@@ -2,14 +2,12 @@
 
    ## Code explanation
 
+   The point of the game is to shoot at a mountain from a ship thus destroying the mountain.
    The _while(1)_ loop is what runs the game. Each iterative run of the loop is
    a turn in the game in which there will be an _input_ of the mountains and the
-   _output_ to fire at a mountains. The inputs are updated per run of the loop
-
-   <span style="background-color: yellow">KJB</span>: I think more context about the game is necessary for the reader to
-   understand the goal. Specifying that these inputs are the heights and that
-   the desired output is the index of the mountain to shoot at.
-   
+   _output_ to fire at a mountains. The inputs take in the mountain's height and the corresponding's mountain's index number,
+   with currentMountain integer recording the Mountain's index number, that is the highest mountain's number. The output
+   Is the number of the mountain with the highest height and will thus be fired upon.
 */
 
 /* Code used for help:
@@ -55,6 +53,9 @@ int main()
                the provided _mountain_height_ variable already accomplishes holding 
                the height of the mounatin in test, so no need for _currentMountain_.
 
+               Response go suggestion above: The above suggestion is incorrect. The _mountain_height_ varible above is updated every loop.
+               It takes in an input from the game and thus changes every loop, it does **NOT** hold the value, and even if it did it doesn't
+               hold the same value that _currentMountain_ does. _currentMountain_ holds the _i_ or the _index_ not the _mountain_height_ provided by the input.
             */
 
             } 
@@ -65,14 +66,8 @@ int main()
             
             /* ## Output Statement
 
-               The statement below outputs a number which causes the ship in the
-               game to shoot the mountain with the **matching** number 
-               
-               <span style="background-color: yellow">KJB</span>: Instead of saying 
-               the output is just a number, call it the index of the mountain to 
-               shoot. Using programming terminology helps your fellow programmers
-               understand the code.
-
+               The statement below outputs the index of the highest mountain stored in currentMountain 
+               which causes the ship in the game to shoot the mountain with the **matching** number 
             */
 
             printf("%d\n", currentMountain);
