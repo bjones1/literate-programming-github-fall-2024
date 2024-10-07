@@ -12,16 +12,8 @@
 
 /* ## Solution approach */
 
-/* Our primary issue with this problem is trying to figure out a way in which to
-   record the highest mountain in a group of mountains and printing the tallest
-   one out while only using a **single** output variable. My approach to this
-   issue started by declaring a single variable, `saveMountain` that will be
-   used to save which mountain is the tallest and that we will fire upon. I then
-   realized I would need some sort of check to compare the height of the current
-   mountain our ship in the game was checking, denoted by `i` in the `for` loop.
-   That was when `saveHeight` was declared. Then in order to utilize this system
-   I put them both in an `if` statement that compared the height of the current
-   mountain in the `for` loop and the tallest mountain saved.
+/* Our main challenge is determining a method to identify and print the tallest mountain from a group, using only a **single** output variable. To tackle this, I began by declaring a variable called 'saveMountain' to store the tallest mountain identified during our search. I then recognized the need for a comparison mechanism to evaluate the height of the current mountain—represented by 'i' in the 'for' loop. This led to the declaration of 'saveHeight'. To implement this logic, I enclosed both variables within an 'if' statement that compared the height of the current mountain in the loop with the height of the tallest mountain saved so far.
+
 
    I had a few problems I ran into while developing my solution. The first of
    which was figuring out where to declare the variables used to save game
