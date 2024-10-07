@@ -58,8 +58,6 @@ int main() {
         int remaining_turns; // The remaining amount of turns Thor can move. Do not remove this line.
         cin >> remaining_turns; cin.ignore();
 
-        // Write an action using cout. DON'T FORGET THE "<< endl" To debug: cerr
-        // << "Debug messages..." << endl;
         //
         // ### _My Code_
         //
@@ -131,6 +129,6 @@ int main() {
 
 // Helpful Links
 //
-// [C++ Cheat Sheet](https://www.codewithharry.com/blogpost/cpp-cheatsheet/) 
+// * [C++ Cheat Sheet](https://www.codewithharry.com/blogpost/cpp-cheatsheet/) 
 //
-// [Markdown Help](https://www.markdownguide.org/cheat-sheet/)
+// * [Markdown Help](https://www.markdownguide.org/cheat-sheet/)
