@@ -1,15 +1,15 @@
 // # Coding with reflexion
-
+//
 // ## Power of Thor
-
+//
 // _here his a link to CodinGame to use this solution :_
 // [CodinGame](https://www.codingame.com/)
-
-
-
+//
+//
+//
 // ### Pre writting
-
-
+//
+//
 // Firstly, I had to understand the problem. To do that, I always write what
 // information I have and what information I want in the output. In this case, I
 // have to help Thor reach his light with 2-dimensional coordinates. Then, with
@@ -24,17 +24,17 @@
 // the wrong order, because I printed the X before the Y. The first two tests
 // worked because it was just a straight line but not the diagonal ones. So I
 // just had to reverse that, and the code was okay for all the tests.
-
+//
 // **The goal of the program here is to allow at the end of each iteration, that
 // thor approaches the light using its coordinates**
 //
 // ![pre writting](pseudocode.jpg)<img style="caret-color: initial;" src="direction_Thor_game.jpg" alt="pre writting" width="205" height="273">
-
+//
 // ### Pseudocode
 //thorX ← initialTX
 //thorY ← initialTY
 //while(infinit loop) 
-	
+//	
 //	directionX ← E, W
 //	directionY ← S,N
 //	if (thorY > lightY)
@@ -53,14 +53,10 @@
 //print the direction ( , ) 
 
 
-
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>    
-
-
 
 int main()
 {
@@ -117,7 +113,7 @@ int main()
             ThorX --;      
         
              
-        //
+        
         // A single line providing the move to be made: N NE E SE S SW W or NW
     
         }
