@@ -45,50 +45,31 @@ int main()
 {
     cout << "start" << endl;
 
-    /* The first int statement declaring a variable we will use to save a
-       particular game element. This one in particular saves the mountain number
-       we will fire on. */
+/* The first int statement declaring a variable we will use to save a particular game element. This one in particular saves the mountain number we will fire on. */
+
     int saveMountain = 0;
 
 // ### Game loop:
 
     while (1) {
 
-        /* The second `int` statement declaring a variable we will use to save a
-           particular game element. This one in particular saves the hieght of
-           the tallest mountan. This one is specifically declared in the
-           `while(1)` loop so it resets to 0 after our ship fires on the highest
-           mountain.
+/* The second `int` statement declaring a variable we will use to save a particular game element. This one in particular saves the hieght of the tallest mountan. This one is specifically declared in the `while(1)` loop so it resets to 0 after our ship fires on the highest mountain.
 
-           <span style="text-decoration: underline;">Note</span>: If
-           `saveHeight` is not reset to
-           zero <span style="text-decoration: underline;">here</span> or
-           <span style="text-decoration: underline;">after our later
-           <code>cout</code> statement</span>, the height will be saved as the
-           max value of 8 and we will never fire on another mountain after the
-           first stage and lose the game. */
+<span style="text-decoration: underline;">Note</span>: If `saveHeight` is not reset to zero <span style="text-decoration: underline;">here</span> or <span style="text-decoration: underline;">after our later <code>cout</code> statement</span>, the height will be saved as the max value of 8 and we will never fire on another mountain after the first stage and lose the game. */
 
         int saveHeight = 0;
 
-        // This `for` loop iterates 8 times so that each mountain's height will
-        // be given to the player one after the other.
+// This `for` loop iterates 8 times so that each mountain's height will
+// be given to the player one after the other.
 
         for (int i = 0; i < 8; i++) {
 
-            /* This `int` statement declaration is a variable used by the game
-               to tell the player the height of the current mountain as denaoted
-               by `i`. The following `cin` statement is the game atively filling
-               this variable with the height. */
+/* This `int` statement declaration is a variable used by the game to tell the player the height of the current mountain as denaoted by `i`. The following `cin` statement is the game atively filling this variable with the height. */
 
             int mountain_h;
             cin >> mountain_h; cin.ignore();
 
-            /* This `if` statement is used to keep track of the heighest
-               mountain as the game progresses. If the current mountain height
-               is taller than the highest height saved it will save which
-               mountain that is in our `saveMountain` variable and save the
-               current height to `saveHeight` so we can continue to compare that
-               height to the other mountains. */
+/* This `if` statement is used to keep track of the heighest mountain as the game progresses. If the current mountain height is taller than the highest height saved it will save which mountain that is in our `saveMountain` variable and save the current height to `saveHeight` so we can continue to compare that height to the other mountains. */
 
             if (mountain_h > saveHeight) {
                 saveMountain = i;
@@ -96,9 +77,7 @@ int main()
             }
         }
 
-        /* `cout` statement that determines which mountain out ship will fire
-           upon. We use `saveMountain` here from our `if` statement above as
-           that statement made sure we saved which mountain was the tallest. */
+/* `cout` statement that determines which mountain out ship will fire upon. We use `saveMountain` here from our `if` statement above as that statement made sure we saved which mountain was the tallest. */
 
         cout << saveMountain << endl;
     }
