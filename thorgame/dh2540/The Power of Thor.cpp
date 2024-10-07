@@ -3,12 +3,17 @@
 // ---
 //
 // [CodinGame](https://www.codingame.com/training/easy/power-of-thor-episode-1)
+<<<<<<< HEAD
 // \*\*Insert my code here. \*\*
 //
 // <mark> CAG:</mark> I would get rid of the "insert my code here part"
 //
 // <mark> CAG:</mark> I would add a heading titled "Problem"
 //
+=======
+// **Insert my code here.**
+
+>>>>>>> dh2540
 // When I first opened this assignment, I looked at the description of the
 // project\
 // in order to understand what was being provided for me, and what I needed to
@@ -36,8 +41,11 @@
 // ---
 //
 // ## _Provided Code_
+<<<<<<< HEAD
 //
 // <mark> CAG:</mark> I would detail what each part of the given code does even though it was given.
+=======
+>>>>>>> dh2540
 #include <iostream>
 #include <string>
 #include <vector>
@@ -69,8 +77,11 @@ int main() {
 
         // ## _My Code_
         //
+<<<<<<< HEAD
         // <mark> CAG:</mark> I would personally add a space between each doc block and the code, but that is personal preference
         //
+=======
+>>>>>>> dh2540
         // If Thor's x and y coordinates are greater than the light's x and y
         // coordinates, move Thor northwest by one.
         if (initial_tx > light_x && initial_ty > light_y) {
@@ -135,8 +146,12 @@ int main() {
 
         }
     }
+<<<<<<< HEAD
 }
 // <mark> CAG:</mark> I Think the program in the IDE and in Codechat both read very well.
 // I might would consider adding a resources section at the bottom but that again is just preference.
 // The main change I would make would be to put your code into the given code and present it as 
 // one cohesive program.
+=======
+}
+>>>>>>> dh2540
