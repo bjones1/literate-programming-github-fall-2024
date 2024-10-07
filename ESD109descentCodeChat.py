@@ -1,7 +1,5 @@
 # # Ethan Davis ESD109 The Descent CodeChat Editor
 
-
-
 # This is _The Descent_, a game that can be found on
 # [Codingame](https://www.codingame.com/ide/puzzle/the-descent) and is
 # classified as an easy puzzle to solve. At first look of this program, I
@@ -15,20 +13,35 @@
 # order to pass each of these a culmination of the different types of loops and
 # if statements that may be needed has to include all of these cases. Below is a
 # simple diagram showing my process that I drew by hand when I first began to
-# solve this problem.
+# solve this problem.\
+# \
+# <span style="color: #000000; background-color: #f1c40f;">all655:</span> The
+# topic sentence seems okay. You seem to know what you are talking about here,
+# but I found it difficult to follow the explanation of your execution. It is
+# unclear to me what the goal or purpose of the program is. I suggest breaking
+# up your thoughts into paragraphs and adding more pictures here. Also, your
+# grammar and spelling need correction throughout this paragraph.
 
 
 
 # ![BlockDiagram / Flowchart](BlockDiagram.jpg)
 
 
-# ## My solution code for the game is present below.
+# ## My solution code for the game is present below. 
+#
+# <span style="color: #000000; background-color: #f1c40f;">all655:</span> In the
+# heading above, you forgot the "ed" in "presented".
 #
 # For the code in the game, I followed a simplistic approach to solving the
 # problem after becoming very frustrating with myself for not being able to
 # overcome it within an hour. The reason that I did this was I went on a pure
 # tangent trying to overcomplicate something that did not need to be
-# complicated!
+# complicated!\
+# \
+# <span style="color: #000000; background-color: #f1c40f;">all655:</span> This
+# part felt a little vague. It would have been helpful if you had included that
+# challenge here for us to learn from.\
+# \\
 import sys
 import math
 
@@ -60,13 +73,31 @@ while True:
             maximum_h = mountain_h
             # This new maximum index, taken from above in line 19 and given a
             # value in maximum_index, is now set to the _I_ given in the current
-            # time
+            # time\
+            # <span style="color: #000000; background-color: #f1c40f;">all655:</span> The
+            # line (19) mentioned in this comment does not match what is shown
+            # in the IDE or CodeChat Editor.
             maximum_index = i
     # Print this maximum index and it will then shoot the mountains in order as
     # it descends. This will show in the codingame website and game window as it
     # runs to show a visual representation of the ship blowing up mountains.
     print(maximum_index)
 
+# <span style="color: #000000; background-color: #f1c40f;">all655:</span> I felt
+# the code read much better in the IDE than in CodeChat Editor. The IDE made it
+# easier to differentiate the code from comments due to the stark color
+# difference. Also, since the program is so incredibly short, I think it would
+# have been far better had you kept your comments within the code to a minimum
+# or even separate. In this way, it would have been easier to read your code
+# rather than having to sift the code from the flood of comments.\
+# \
+# <span style="color: #000000; background-color: #f1c40f;">all655:</span> Your
+# variable names were meaningful and relevant. Good job.\
+# \
+# <span style="color: #000000; background-color: #f1c40f;">all655:</span> Overall,
+# your program was understandable, but the explanation of the purpose in the
+# first paragraph needs a little work.
+#
 # ## Below is a small discussion on this game
 #
 # The game was a brainteaser while also being a very cohesive and have the
@@ -74,4 +105,10 @@ while True:
 # process in the programmer tackling the problem. While multiple attempts could
 # be made and it each different case can be correct, the simplicity of it and
 # the ability for others to cohesively understand what the programmer did is the
-# main focus for taking in the thought process.
+# main focus for taking in the thought process.\
+# \
+# <span style="color: #000000; background-color: #f1c40f;">all655:</span> You
+# make a good point here in this paragraph, but your grammar needs improvement.\
+# \
+# <span style="color: #000000; background-color: #f1c40f;">all655:</span> All
+# topic sentences seemed fine in my viewing.
