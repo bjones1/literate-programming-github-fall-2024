@@ -13,7 +13,7 @@
 /* ## Solution approach */
 
 /* Our primary issue with this problem is trying to figure out a way in which to
-   record the highest mountain in a group of mountains and priting the tallest
+   record the highest mountain in a group of mountains and printing the tallest
    one out while only using a **single** output variable. My approach to this
    issue started by declaring a single variable, `saveMountain` that will be
    used to save which mountain is the tallest and that we will fire upon. I then
