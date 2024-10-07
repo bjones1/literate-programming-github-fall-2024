@@ -2,20 +2,13 @@
 //
 // ## **How to Win**
 //
-// This game is **won** by _moving Thor one space at a time towards the light\
+// This game is **won** by _moving Thor one space at a time towards the light
 // until he reaches the space occupied by the light_. The map, Image 1, is a
-// coordinate grid\
-// beginning at (0,0) and goes to (39,17) with **positive X direction to the
-// East**\
-// and **positive Y direction to the South**. Thor is directed in cardinal
-// directions\
-// using the character output (cout) function in c++. Below is a list of the\
-// characters output and their corresponding direction.
-//
-// <span style="background-color: #fbeeb8;">TAM </span> This is a good
-// description of the game. For someone that has never worked on this problem, I
-// think that I understand what the programmer needs to do to solve this
-// problem.
+// coordinate grid beginning at (0,0) and goes to (39,17) with **positive X
+// direction to the East** and **positive Y direction to the South**. Thor is
+// directed in cardinal directions using the character output (cout) function in
+// c++. Below is a list of the characters output and their corresponding
+// direction.
 //
 // - "N" for _north_
 // - "NE" for _northeast_
@@ -31,22 +24,15 @@
 // This image was obtained from
 // [codingame.com](https://www.codingame.com/ide/puzzle/power-of-thor-episode-1)
 //
-// <span style="background-color: #fbeeb8;">TAM</span> I appreciate you
-// inserting the image here. Seeing the map helps visualize the goal of the
-// game.
-//
 // ## My Approach
 //
-// For the problem of getting Thor to the light my solution is simple, compare\
-// the light's position with Thor's and determine the correct direction to
-// move.\
+// For the problem of getting Thor to the light my solution is simple, compare
+// the light's position with Thor's and determine the correct direction to move.
 // The game gives the X and Y position of the light as well as the X and Y
-// position\
-// of Thor. Knowing that the X values increase to the east and the Y values
-// increase\
-// to the south, the direction Thor needs to go can be determined from the
-// light's\
-// position. Listed below are the scenarios and the directon Thor will go.
+// position of Thor. Knowing that the X values increase to the east and the Y
+// values increase to the south, the direction Thor needs to go can be
+// determined from the light's position. Listed below are the scenarios and the
+// directon Thor will go.
 //
 // ### Conditions
 //
@@ -54,12 +40,10 @@
 // - Light X < Thor X: **West**
 // - Light Y > Thor Y: **South**
 // - Light Y < Thor Y: **North**
-
+//
 // If there is a combination of the X _and_ Y differing, Thor will move in a
-// combination\
-// of the cardinal directions. After moving Thor, his position will need to be
-// updated\
-// based on the direction he was moved.
+// combination of the cardinal directions. After moving Thor, his position will
+// need to be updated based on the direction he was moved.
 //
 // I also found it beneficial to see the map a little differently so I drew it
 // out with the the directions in the middle. It can be seen in Image 2 below.
@@ -72,42 +56,30 @@
 //
 // ![Map Sketch](map_sketch.png)
 //
-// <span style="background-color: #fbeeb8;">TM </span> I am glad that you
-// included this picture. I agree that this drawing makes it much easier to
-// understand than the map given from the game.
-//
 // ### _Beginning of auto generated code by the game_
 #include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
-
 using namespace std;
-
-/**
- * Auto-generated code below aims at helping you parse
- * the standard input according to the problem statement.
- * ---
- * Hint: You can use the debug stream to print initialTX and initialTY, if Thor seems not follow your orders.
- **/
 
 int main()
 {
     // ### **Variable Names and Assignments**
-    int light_x; // the X position of the light of power
-    int light_y; // the Y position of the light of power
-    int initial_tx; // Thor's starting X position
-    int initial_ty; // Thor's starting Y position
-    cin >> light_x >> light_y >> initial_tx >> initial_ty; cin.ignore();
+    //
+    // This section initializes and assigns the light's and Thor's x and y
+    // position with _light_x_, _light_y_, _thor_x_, and _thor_y_.
+    int light_x;
+    int light_y;
+    int thor_x;
+    int thor_y;
+    cin >> light_x >> light_y >> thor_x >> thor_y; cin.ignore();
 
     // ### **Game Loop**
     while (1) {
-        int remaining_turns; // The remaining amount of turns Thor can move. Do not remove this line.
-        cin >> remaining_turns; cin.ignore();
-
-        // Write an action using cout. DON'T FORGET THE "<< endl" To debug: cerr
-        // << "Debug messages..." << endl;
-        
+        // The remaining amount of turns Thor can move. Do not remove this line.
+        int remaining_turns; 
+        cin >> remaining_turns; cin.ignore();        
         // ## **Beginning of User Created Code**
         //
         // The code I wrote to solve this game begins after this. It is\
@@ -119,13 +91,9 @@ int main()
         // ## Straight Line Movement
         //
         // When either Thor's X or Y value matches one of the X or Y values of
-        // the light<span style="background-color: #fbeeb8;">,</span> Thor needs
-        // to move in a straight line towards the light. These two sections are
-        // split into the logic to find North or South movement and then East or
-        // West movement.
-        //
-        // <span style="background-color: #fbeeb8;">TAM </span> I added a comma
-        // between 'light' and 'Thor'
+        // the light, Thor needs to move in a straight line towards the light.
+        // These two sections are split into the logic to find North or South
+        // movement and then East or West movement.
         //
         // ### North/South
         //
@@ -137,23 +105,16 @@ int main()
         // it fails that but it is already in this if statement, then Thor's
         // direction can be determined to be north without the need to do any
         // more comparisons.
-        
-        if(light_x == initial_tx){
-            if(light_y > initial_ty){
+        if (light_x == thor_x) {
+            if (light_y > thor_y) {
                 cout << "S" << endl;
-                initial_ty ++;
+                thor_y++;
             }
             else {
                 cout << "N" << endl;
-                initial_ty --;
+                thor_y--;
             }
         }
-        // TAM It is a little confusing when you use initial_tx/y as Thor's
-        // position, since it's no longer the _initial_ position. I would have
-        // set thor_x/y to the initial value of initial_tx/y. This way, we can
-        // distinguish between the initial position of Thor and the current
-        // position of Thor
-        //
         // ### East/West
         //
         // This if statement checks for the light's Y value matching Thor's Y
@@ -164,14 +125,14 @@ int main()
         // check, it means Thor's x value would have to be greater than the
         // light's causing Thor to need to move to the West and have his X value
         // decreased by one.
-        else if(light_y == initial_ty){
-            if(light_x > initial_tx){
+        else if (light_y == thor_y) {
+            if (light_x > thor_x) {
                 cout << "E" << endl;
-                initial_tx ++;
+                thor_x++;
             }
             else {
                 cout << "W" << endl;
-                initial_tx --;
+                thor_x--;
             }
         }
 
@@ -197,16 +158,16 @@ int main()
         // being in this statement that the only other option would be to move
         // Thor to the northeast, and then increase Thor's X value and decrease
         // Thor's Y value becaue he is now moving up.
-        else if(light_x > initial_tx){
-            if(light_y > initial_ty){
+        else if (light_x > thor_x) {
+            if (light_y > thor_y) {
                 cout << "SE" << endl;
-                initial_tx ++;
-                initial_ty ++;
+                initial_tx++;
+                thor_y++;
             }
-            else{
+            else {
                 cout << "NE" << endl;
-                initial_tx ++;
-                initial_ty --;
+                initial_tx++;
+                thor_y--;
             }
         }
 
@@ -220,29 +181,18 @@ int main()
         // did, if the light's Y is greater, move Thor to the southwest and
         // decrease Thor's X value and increase his Y. If not move Thor to the
         // southwest and decrease both his X and Y value.
-        else if(light_x < initial_tx){
-            if(light_y > initial_ty){
+        else if (light_x < thor_x) {
+            if (light_y > thor_y) {
                 cout << "SW" << endl;
-                initial_tx --;
-                initial_ty ++;
+                initial_tx--;
+                thor_y++;
             }
-            else{
+            else {
                 cout << "NW" << endl;
-                initial_tx --;
-                initial_ty --;
+                initial_tx--;
+                thor_y--;
             }
         }
     
     }
 }
-// ## <span style="background-color: #fbeeb8;">Overall</span>
-//
-// Drake did a good job incorporating the CodeChat Editor on this project. There
-// is the slight variable name change that I would implement, but other than
-// that, this is very legible in both the CodeChat environment and my regular
-// IDE. I like how your comments allign with the code's indentation. This makes
-// the code easier to read in both environments. I thought it was a very good
-// idea to add images to the document. Both the map given by the game and the
-// map that Drake drew really helped me visualize how the game worked.
-//
-// I pasted this code into the actual game and it passed!
