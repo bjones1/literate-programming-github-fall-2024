@@ -10,18 +10,9 @@
 //
 // ## The puzzle I chose was *<a title="Shadows of the Knight - Episode 1" href="https://www.codingame.com/training/medium/shadows-of-the-knight-episode-1" target="_blank" rel="noopener">Shadows of the Knight - Episode 1</a>*
 //
-// ### How I went about solving this puzzle:
+// ### How I went about solving this puzzle: 
 //
-// <span style="background-color: #f1c40f;">ESD109:</span> This entire
-// introduction went through an educational look through into your mind. I will
-// go through and add my comments throughout the two introductory paragraphs,
-// and then I will add some based off of your pictures.
-//
-// <span style="background-color: #f1c40f;">ESD109:</span> As I did similar,
-// starting to code immediately, I did begin to find that the problem was much
-// harder than originally thought. As these problems for condingame were found
-// to be harder than thought by many, the thinking process began to take more
-// time than the coding.
+// 
 //
 // At first, I began by coding. I just read very carefully through the
 // instructions that stated what the program was supposed to do. I then realized
@@ -34,10 +25,7 @@
 // concrete came to mind. At this point, which was about 15 minutes, I made some
 // notes/drawings, which are shown at the end of this document.
 //
-// <span style="background-color: #f1c40f;">ESD109:</span> The steps are clear
-// and concise when talking about your thought process and how you ran through
-// it. I appreciate the use of shorthand when talking about these directions as
-// typing it out longhand would take ages.
+// 
 //
 // When I wrote out my ideas on paper as instructed in step 4 (see
 // [Coding with Reflection assignment instructions](https://canvas.msstate.edu/courses/133359/assignments/1257462)),
@@ -68,20 +56,12 @@
 // <img style="border-style: ridge;" title="notes2.jpg" src="notes2.jpg" alt="" width="700" height="1200">
 // <img style="border-style: ridge;" title="notes3.jpg" src="notes3.jpg" alt="" width="700" height="700">
 //
-// <span style="background-color: #f1c40f;">Esss</span>
-
+// 
 // In this sketch, I realized what the math would look like or involve to find
 // the center of the “box”. This was the moment that I grasped it was just some
 // simple algebra.
 //
-// <span style="background-color: #f1c40f;">ESD109:</span> I have found a
-// problem in formatting after the last image and before the key insight was
-// given. In the line above, the key insight to how the problem was solved is
-// presented, however the single space of newline before it is present and it
-// actually breaks the formatting on codechat editor to where if I try to type
-// it will send me to the start of the document and not allow me to type further
-// without going back down. This is possibly because of the codechat editor and
-// ide talking back to each other.
+// 
 //
 // ## The code is as follows:
 #include <iostream>
@@ -110,32 +90,19 @@ int main()
     // I was going to use a 2d array but decided not to as my way made more
     // sense to me. int array\[w\]\[h\] = {0};
     //
-    // <span style="background-color: #f1c40f;">ESD109:</span> Good idea as
-    // arrays are more trouble than they are worth a lot of the time. Explaining
-    // the central points and the definitions of the variables below are key.
-
+    // 
     // These were used to track of where Batman was as well as configure the
     // boundaries for the box, which is explained further below.
     int x = x0;
     int y = y0;
 
-    // To keep track of the area that the bomb could be and couldn't, I kept
-    // track of box that would contain all potential poits that the bomb may be.
+    // To keep track of the area that the bomb could and could not be, I kept
+    // track of a box that would contain all potential points that the bomb may be.
     // Any point outside of the box that would slowly shrink were considered
     // void or not a possibility of containing the bomb.
     //
-    // <span style="background-color: #f1c40f;">ESD109:</span> A few typos and
-    // grammar structure above, but it isn't anything that inhibits
-    // understanding the process. It is also a good thought process to include
-    // that there are points that could not possibly have the bomb in it, so
-    // they shouldn't be bothered with. The variable names below are clear and
-    // concise while not being overly long. My summary of the code is that the
-    // naming conventions of the code are simple and easy to follow while also
-    // being direct when looking at it. Every action, even the arithmetic, is
-    // clear because of the naming conventions and everything is properly spaced
-    // to where reading through it is easy. The code is, additionally, easy to
-    // read in the IDE as well as codechat editor, which is a bonus as the mix
-    // between the two can be muddled up very easily.
+    //
+    // 
     int boxLeftSide = 0; // Left side of box
     int boxRightSide = w; // Right side of box
     int boxTopSide = 0; // Top side of box
