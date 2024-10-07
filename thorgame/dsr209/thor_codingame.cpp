@@ -1,14 +1,19 @@
-// # **_thor_codingame.cpp: c++_**
+// # **_Power of Thor - Episode 1_**
+// ECE4793 - Introduction to GitHub Assignment Written in c++ \
+// Name: Drake Robertson \
+// NetID: dsr209
+// 
+// ---
 //
-// ## **How to Win**
+// ## **About the Game**
 //
-// This game is **won** by _moving Thor one space at a time towards the light
-// until he reaches the space occupied by the light_. The map, Image 1, is a
-// coordinate grid beginning at (0,0) and goes to (39,17) with **positive X
-// direction to the East** and **positive Y direction to the South**. Thor is
-// directed in cardinal directions using the character output (cout) function in
-// c++. Below is a list of the characters output and their corresponding
-// direction.
+// This game involves Thor, a red lightning bolt, the light, and the map. It is **won** 
+// by _moving Thor one space at a time towards the light until he reaches the 
+// space occupied by the light_. The map, Image 1, is a coordinate grid beginning 
+// at (0,0) and goes to (39,17) with **positive X direction to the East** and 
+// **positive Y direction to the South**. Thor is directed in cardinal directions 
+// using the character output (cout) function in c++. Below is a list of the 
+// characters output and their corresponding direction.
 //
 // - "N" for _north_
 // - "NE" for _northeast_
@@ -82,9 +87,9 @@ int main()
         cin >> remaining_turns; cin.ignore();        
         // ## **Beginning of User Created Code**
         //
-        // The code I wrote to solve this game begins after this. It is\
-        // broken into four sections. They each follow similar but _different_\
-        // logic to compare Thor's position with the light and then move him\
+        // The code I wrote to solve this game begins after this. It is
+        // broken into four sections. They each follow similar but _different_
+        // logic to compare Thor's position with the light and then move him
         // in the correct direction.
         
 // ---
@@ -102,9 +107,10 @@ int main()
         // checks for the X axis being the same, then it compares the y
         // positions of Thor and the light. If the light is greater it outputs
         // "S" to have Thor move south then it increases Thor's Y position. If
-        // it fails that but it is already in this if statement, then Thor's
+        // it fails that but it is already in this _if_ statement, then Thor's
         // direction can be determined to be north without the need to do any
-        // more comparisons.
+        // more comparisons. Thor's y position is then decreased to account for
+        // Thor moving one space North.
         if (light_x == thor_x) {
             if (light_y > thor_y) {
                 cout << "S" << endl;
@@ -161,12 +167,12 @@ int main()
         else if (light_x > thor_x) {
             if (light_y > thor_y) {
                 cout << "SE" << endl;
-                initial_tx++;
+                thor_x++;
                 thor_y++;
             }
             else {
                 cout << "NE" << endl;
-                initial_tx++;
+                thor_x++;
                 thor_y--;
             }
         }
@@ -184,12 +190,12 @@ int main()
         else if (light_x < thor_x) {
             if (light_y > thor_y) {
                 cout << "SW" << endl;
-                initial_tx--;
+                thor_x--;
                 thor_y++;
             }
             else {
                 cout << "NW" << endl;
-                initial_tx--;
+                thor_x--;
                 thor_y--;
             }
         }
