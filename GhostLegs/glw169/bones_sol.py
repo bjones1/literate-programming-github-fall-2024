@@ -1,6 +1,5 @@
 import sys
 import math
-
 # # bones_sol.py - The solution to the *Ghost Legs* problem
 #
 # Here is a
@@ -40,9 +39,6 @@ starting_line = input()
 # ASCI art input
 start_points = list(zip(starting_line.split(), [i*3 for i in range(w//2)]))
 start_points = [list(i) for i in start_points]
-
-
-
 # #### **Parsing game board**
 #
 # Since the board is given line by line in the form of ASCI art, one must think
@@ -61,15 +57,11 @@ start_points = [list(i) for i in start_points]
 # **NOTE**: movements between bones are +/- 3 characters in the string
 for i in range(h-2):
     line = input()
-
     moved = []
     # Iterate through each bone in the current line
     for idx in range(0, len(line)+1, 3):
-
         # The idea is to check each bone in the input line and, if a bridge is
-        # next to it, have the
-        #
-        # trace for the label move to the connected bone
+        # next to it, have the trace for the label move to the connected bone.
         #
         # Rightmost bone edge-case: the rightmost bone cannot move further right
         if idx < len(line)-1:
@@ -80,20 +72,16 @@ for i in range(h-2):
                     if bone[1] == idx and bone[0] not in moved:
                         bone[1] += 3
                         moved.append(bone[0])
-
         # Leftmost bone edge-case: the leftmost bone cannot move further left
         if idx > 0:
             # Is there a branch to the left?
             if line[idx-1] == '-':
                 for bone in start_points:
-                    # any bone trace here and not moved this loop?
+                    # Any bone trace here and not moved this loop?
                     if bone[1] == idx and bone[0] not in moved:
                         bone[1] -= 3
                         moved.append(bone[0])
-
 ending_line = input()
-# #### Determining the output
-#
 # Now that each top label has traversed the bones to the bottom, they need to be
 # mapped to the correct bottom label in order to produce the correct pairings as
 # output. First, the bottom labels are extracted from the last input string. We
@@ -105,10 +93,8 @@ i = 0
 end_points = [ending_line[i*3] for i in range(w//3+1)]
 while i < len(start_points):
     point = start_points[i]
-
     # Convert string index to bottom label index
     start_points[i] = [point[0], end_points[point[1]//3]]
     # Print out that label's output
     print(start_points[i][0] + start_points[i][1])
-    
     i = i+1
