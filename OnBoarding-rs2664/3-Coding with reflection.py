@@ -25,7 +25,7 @@
 # Prior to coding, a graphical representation of the problem.
 # <img src="Drawing-1.jpg" alt="" width="625" height="715">
  
-# ### <span style="text-decoration: underline;"><em>Components of the Program:&nbsp;</em></span>          
+# ### <span style="text-decoration: underline;"><em>Components of the Program:&nbsp;</em></span>           
  # 1.  **Input**: The program takes the names and distances of two enemies as
  #     inputs.
  # 2.  **Comparison**: It compares the two distances.
