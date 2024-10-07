@@ -4,7 +4,8 @@
 //
 // <span style="background-color: #f1c40f;">DH </span> : I think you should keep
 // your code together. Move this down to the rest of your code. Have it after
-// you explain the problem.
+// you explain the problem. <mark>CG: </mark> I personally like the separation
+// but I understand what you mean.
 
 // **First we want to include our libraries:**
 #include <iostream>
@@ -18,6 +19,8 @@ using namespace std;
 //
 // <span style="background-color: #f1c40f;">DH </span> : Saying program again is
 // very redundant. You could scrap that and replace the heading with "Problem."
+// <mark>CG: </mark> I personally think the Program heading is broader than just
+// the problem.
 
 // ### Problem:
 
@@ -25,7 +28,8 @@ using namespace std;
 // [here.](https://www.codingame.com/training/easy/power-of-thor-episode-1)
 //
 // <span style="background-color: #f1c40f;">DH </span> : I can't see the
-// screenshot.
+// screenshot. <mark>CG: </mark> I will have to discuss this with Dr. Jones. I
+// fixed it, but it has disappeared again.
 
 // ![Thor_Screenshot2](Thor_Screenshot2.jpg)
 
@@ -64,11 +68,11 @@ int main()
     while (1) {
         // <span style="background-color: #f1c40f;">DH </span> : Indent your
         // comments in while loop. The code needs to line up properly or it will
-        // fell off-putting.
+        // fell off-putting. <mark>CG: </mark> Fixed
       
 
-	// This was given in the problem. It declares remaining_turns as a variable and
-	// keeps track of how many remaining turns are left.
+	    // This was given in the problem. It declares remaining_turns as a variable
+	    // and keeps track of how many remaining turns are left.
 
         int remaining_turns; 
         cin >> remaining_turns; cin.ignore();
@@ -94,12 +98,12 @@ int main()
 	// and add 1 to his initial X position. This goes on until Thor reaches his
 	// destination.
         // <span style="background-color: #f1c40f;">DH </span> : Decrease the
-        // indent for this line of code.
+        // indent for this line of code. <mark> CG: </mark> Fixed
 
-           else if (light_x > initial_tx){
-                cout << "E" << endl;
-                initial_tx = initial_tx + 1;
-            }
+        else if (light_x > initial_tx){
+            cout << "E" << endl;
+            initial_tx = initial_tx + 1;
+       }
         
         
     }
