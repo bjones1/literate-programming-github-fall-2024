@@ -1,8 +1,6 @@
 // # A program that resolves the "There is no spoon - Episode 1" problem from [Coding game website](https://www.codingame.com/home)
-
 // ## The problem and the solution
 // <img src="There is no spoon Episode 1 solution image.png" style="width:500px;height:600px;margin:0"></img>
-
 // ## The implementation in C#
 using System;
 using System.Linq;
@@ -14,12 +12,9 @@ class Player
 {
         static void Main(string[] args)
         {
-          
             // ### Get Input Details
-
-            /* <p><i>Get input details includign width, height, and the lines. Use horizontal and vertical lines to store the input details for processing</i></p>
+            /* <p><i>Get input details including width, height, and the lines. Use horizontal and vertical lines to store the input details for processing</i></p>
             */
-
             int width = int.Parse(Console.ReadLine()); // the number of cells on the X axis 
             int height = int.Parse(Console.ReadLine()); // the number of cells on the Y axis 
             var lines = new List<char[]>();
@@ -55,18 +50,13 @@ class Player
             
             var horizontalLinesStrings = horizontalLines.Select(s => s.ToString().ToCharArray().ToList()).ToArray();
             var verticalLIneStrings = verticalLines.Select(s => s.ToString().ToCharArray().ToList()).ToArray();
-            
+
             // ### Process nodes
-
             // <p><i>Process nodes line by line reading each node (character) in the line. If the node is not empty, find neighboring nodes (right and bottom). If the node is empty ignore it.</i></p>
-
-            // <p><i>Since the approach to find the next node uses C# List IndexOf method, keep track of the nodes found and don't use the node again for each line.</i></p>
-            var processedNodes = new Dictionary<string, string>();
             for (var i = 0; i < lines.Count(); i++)
             {
                 var horizontalLine = horizontalLinesStrings[i];
                 
-                processedNodes.Clear();
                 for (var j = 0; j < width; j++)
                 {
                     var verticalLine = verticalLIneStrings[j];
@@ -89,7 +79,6 @@ class Player
                         if (nextIndex >= 0)
                         {
                             nextNodeToRight = node1;
-                            processedNodes.Add(node1, "");
                         }
                     }
 
@@ -103,7 +92,6 @@ class Player
                         if (nextIndex >= 0)
                         {
                             nextNodeToBottom = node2;
-                            processedNodes.Add(node2, "");
                         }
                     }
                     // <i>If no neighboring node found  -1 -1 will be used as the coordinate<i/>
