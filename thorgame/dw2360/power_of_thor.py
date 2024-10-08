@@ -15,6 +15,7 @@ import math
 # You lose by Thor running out of energy or running off the map (40 x 18 grid).
 #
 # ## **Approach**
+# ![Logic](logic.png)
 #
 # > The conditional statements begin with comparing Thor's initial XY position
 # > to where the light of power's XY position is located.
@@ -41,16 +42,12 @@ import math
 # - _initial_tx_: Thor's starting X position
 # - _initial_ty_: Thor's starting Y position
 #
-# ### **Fixes**
-#
-
-# <mark>JJM702: (Included pictures should visualize important planning or problem instead of text. This photos text does howoever clearly explain your approach and key insight into solving the problem.)</mark>)
-# ![Logic](logic.png)
+# ### **Logic**
+# ![Example](thorgame_example.png)
 #
 # ## **Solution**
 
-# <mark>JJM702: (Good use of meaningful variable names for positions like `light_x`, `initial_tx`, etc. These clearly indicate the purpose of each variable.)</mark>
-
+# Variables
 light_x, light_y, initial_tx, initial_ty = [int(i) for i in input().split()]
 
 # Game loop
@@ -62,12 +59,12 @@ while True:
 
 # <mark>JJM702: (The logic in the following conditionals is somewhat confusing due to the use of a single `&` operator, which is a bitwise AND. In Python, use `and` for logical AND, or `&` for bitwise operations. Here, you likely meant to use `and`.)</mark>
 
-    if initial_ty < light_y & initial_tx < light_x:
+    if initial_ty < light_y and initial_tx < light_x:
         initial_ty = initial_ty + 1
         initial_tx = initial_tx + 1
         print("SE")
 # <mark>JJM702: (Comments above code explaining what the code does.)</mark>
-    elif initial_ty < light_y & initial_tx > light_x:
+    elif initial_ty < light_y and initial_tx > light_x:
         initial_ty = initial_ty + 1
         initial_tx = initial_tx - 1
         print("SW")
