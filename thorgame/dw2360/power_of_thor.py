@@ -56,12 +56,15 @@ while True:
     # Write an action using print To debug: print("Debug messages...",
     # file=sys.stderr, flush=True)
 
-
+    # Compares Thor's initial position with the position of the light of power.  
+    # If Thor's y coordinates are less than the light of power's y coordinates, 
+    # and if Thor's x coordinates are less than the light of power's y coordinates,   
+    # then add 1 unit to Thor's x and y position, thus moving SouthEast until Thor reaches the light of power
     if initial_ty < light_y and initial_tx < light_x:
         initial_ty = initial_ty + 1
         initial_tx = initial_tx + 1
         print("SE")
-# <mark>JJM702: (Comments above code explaining what the code does.)</mark>
+
     elif initial_ty < light_y and initial_tx > light_x:
         initial_ty = initial_ty + 1
         initial_tx = initial_tx - 1
@@ -78,5 +81,3 @@ while True:
     elif initial_tx > light_x:
         initial_tx = initial_tx - 1
         print("W")
-  
-# <mark>JJM702: (Indentation and spacing in text could be improved. Grammatically it seems fine. Could use more custom description overall to explain your thoughts e.g. relay information about the game quickly and then introduce your problem solving approach and highlight key insights.)</mark>
