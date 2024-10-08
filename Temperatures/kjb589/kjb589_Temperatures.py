@@ -49,7 +49,7 @@ else:
     closestTemp = 5526
 
 for i in input().split():
-    # _t_: a temperature expressed as an integer ranging from -273 to 5526
+    # _curr_: a temperature expressed as an integer ranging from -273 to 5526
     curr = int(i)
     
     # Compare absolute values to find value closest to zero. Store new input if
