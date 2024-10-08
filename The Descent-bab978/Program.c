@@ -47,13 +47,7 @@ int main()
                 currentMountain = i;
 
             /*
-               
-               <span style="background-color: yellow">KJB</span>: _currentMountain_ 
-               doesn't seem to be used outside of holding _i_ which is redundant.
-               the provided _mountain_height_ variable already accomplishes holding 
-               the height of the mounatin in test, so no need for _currentMountain_.
-
-               Response go suggestion above: The above suggestion is incorrect. The _mountain_height_ varible above is updated every loop.
+               Response to code review: The suggestion was incorrect. The _mountain_height_ varible above is updated every loop.
                It takes in an input from the game and thus changes every loop, it does **NOT** hold the value, and even if it did it doesn't
                hold the same value that _currentMountain_ does. _currentMountain_ holds the _i_ or the _index_ not the _mountain_height_ provided by the input.
             */
