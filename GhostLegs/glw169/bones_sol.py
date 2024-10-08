@@ -37,8 +37,10 @@ w, h = [int(i) for i in input().split()]
 starting_line = input()
 # Calculate the string index for each top label to relate it to a bone in the
 # ASCI art input
-start_points = list(zip(starting_line.split(), [i*3 for i in range(w//2)]))
-start_points = [list(i) for i in start_points]
+# 
+# Identify all labels and their respective string index
+# Store each non-space character & its string index as a list pair in a list of labels
+start_points = [[starting_line[i], i] for i in range(len(starting_line)) if starting_line[i] != ' ']
 # #### **Parsing game board**
 #
 # Since the board is given line by line in the form of ASCI art, one must think
