@@ -57,6 +57,7 @@ start_points = [[starting_line[i], i] for i in range(len(starting_line)) if star
 # them.
 #
 # **NOTE**: movements between bones are +/- 3 characters in the string
+# Do not re-parse label lines (2 lines in total)
 for i in range(h-2):
     line = input()
     moved = []
@@ -91,11 +92,14 @@ ending_line = input()
 # ending string index, we sample the end list of bottom labels with the integer
 # division of the string index by 3, the distance between bones in the input.
 # Finally, for each starting label, we output the start-end pair.
-i = 0
+# 
+# Calculate a string index for each label (1 + the integer division of the line width by 3)
 end_points = [ending_line[i*3] for i in range(w//3+1)]
+i = 0
 while i < len(start_points):
     point = start_points[i]
     # Convert string index to bottom label index
+    # The integer division by 3 of the string index gets the label index
     start_points[i] = [point[0], end_points[point[1]//3]]
     # Print out that label's output
     print(start_points[i][0] + start_points[i][1])
