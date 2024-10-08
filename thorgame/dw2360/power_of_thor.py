@@ -1,10 +1,9 @@
+# # Power of Thor Game: [Codinggame.com](https://www.codingame.com/ide/puzzle/power-of-thor-episode-1)
+# ## Imports
+
 import sys
 import math
 
-# <mark>JJM702: (I would let the top heading be at the very top of the page and second level heading be for imports explaining built in and third party packages)</mark>
-
-# # Power of Thor Game: [Codinggame.com](https://www.codingame.com/ide/puzzle/power-of-thor-episode-1)
-#
 # ## **Game Objective**
 #
 
