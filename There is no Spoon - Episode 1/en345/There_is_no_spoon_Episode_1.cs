@@ -14,12 +14,9 @@ class Player
 {
     static void Main(string[] args)
     {
-
         // ### Get Input Details
-
         /* <p><i>Get input details including width, height, and the lines. Use horizontal and vertical lines to store the input details for processing</i></p>
         */
-
         int width = int.Parse(Console.ReadLine()); // the number of cells on the X axis 
         int height = int.Parse(Console.ReadLine()); // the number of cells on the Y axis 
         var lines = new List<char[]>();
@@ -57,7 +54,6 @@ class Player
         var verticalLIneStrings = verticalLines.Select(s => s.ToString().ToCharArray().ToList()).ToArray();
 
         // ### Process nodes
-
         // <p><i>Process nodes line by line reading each node (character) in the line. If the node is not empty, find neighboring nodes (right and bottom). If the node is empty ignore it.</i></p>
         for (var i = 0; i < lines.Count(); i++)
         {
