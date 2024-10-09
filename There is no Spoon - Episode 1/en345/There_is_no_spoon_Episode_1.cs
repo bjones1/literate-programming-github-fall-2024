@@ -1,4 +1,4 @@
-// # A program that resolves the "There is no spoon - Episode 1" problem from [Coding game website](https://www.codingame.com/home)
+// # A program that solves the "There is no spoon - Episode 1" problem from [Coding game website](https://www.codingame.com/home)
 // ## The problem and the solution
 // <img src="There is no spoon Episode 1 solution image.png" style="width:500px;height:600px;margin:0"></img>
 // ## The implementation in C#
@@ -13,8 +13,9 @@ class Player
         static void Main(string[] args)
         {
             // ### Get Input Details
-            /* <p><i>Get input details including width, height, and the lines. Use horizontal and vertical lines to store the input details for processing</i></p>
-            */
+            /* _Get input details including width, height, and the lines. Use
+               horizontal and vertical lines to store the input details for
+               processing_ */
             int width = int.Parse(Console.ReadLine()); // the number of cells on the X axis 
             int height = int.Parse(Console.ReadLine()); // the number of cells on the Y axis 
             var lines = new List<char[]>();
@@ -31,14 +32,15 @@ class Player
                 foreach (var c in line.Trim(' ', '"'))
                 {
                     lines[i][widthIndex] = c;
-                    // <i><b>If the horizontal line wasn't already added, add one</b></i>
+                    // _**If the horizontal line wasn't already added, add
+                    // one**_
                     if (horizontalLines[i] == null)
                     {
                         horizontalLines[i] = new StringBuilder();
                     }
 
                     horizontalLines[i].Append(c);
-                    // <i><b>If the vertical line wasn't already added, add one</b></i>
+                    // _**If the vertical line wasn't already added, add one**_
                     if (verticalLines[widthIndex] == null)
                     {
                         verticalLines[widthIndex] = new StringBuilder();
@@ -52,7 +54,9 @@ class Player
             var verticalLIneStrings = verticalLines.Select(s => s.ToString().ToCharArray().ToList()).ToArray();
 
             // ### Process nodes
-            // <p><i>Process nodes line by line reading each node (character) in the line. If the node is not empty, find neighboring nodes (right and bottom). If the node is empty ignore it.</i></p>
+            // _Process nodes line by line reading each node (character) in the
+            // line. If the node is not empty, find neighboring nodes (right and
+            // bottom). If the node is empty ignore it._
             for (var i = 0; i < lines.Count(); i++)
             {
                 var horizontalLine = horizontalLinesStrings[i];
@@ -63,7 +67,7 @@ class Player
 
                     if (horizontalLine[j] == '.')
                     {
-                        // **<i>Ignore nodes with .**</i>
+                        // **_Ignore nodes with ._**
                         continue; 
                     }
                     // **Next node in the line**
@@ -94,8 +98,11 @@ class Player
                             nextNodeToBottom = node2;
                         }
                     }
-                    // <i>If no neighboring node found  -1 -1 will be used as the coordinate<i/>
-                    // <p><i>Output the node and neighboring nodes coordinates</i></p>
+                    // _If no neighboring node found -1 -1 will be used as the
+                    // coordinate_
+                    //
+                    // _Output the node and neighboring nodes coordinates_
+                    //
                     Console.WriteLine($"{node} {nextNodeToRight} {nextNodeToBottom}");
                 }
             }
