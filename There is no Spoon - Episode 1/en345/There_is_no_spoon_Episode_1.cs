@@ -1,7 +1,7 @@
 // # A program that resolves the "There is no spoon - Episode 1" problem from [Coding game website](https://www.codingame.com/home)
 
 // ## The problem and the solution
-// <img src="There is no spoon Episode 1 solution image.png" style="width:500px;height:600px;margin:0"></img>
+// ![There is no spoon Episode 1 solution image](There_is_no_spoon_Episode_1_solution_image.png)
 
 // ## The implementation in C#
 using System;
