@@ -10,7 +10,7 @@
 //
 // ## The puzzle I chose was *<a title="Shadows of the Knight - Episode 1" href="https://www.codingame.com/training/medium/shadows-of-the-knight-episode-1" target="_blank" rel="noopener">Shadows of the Knight - Episode 1</a>*
 //
-// ### How I went about solving this puzzle:
+// ### How I went about solving this puzzle: 
 //
 // At first, I began by coding. I just read very carefully through the
 // instructions that stated what the program was supposed to do. I then realized
@@ -20,8 +20,8 @@
 // was given through the string variable bomb_dir. At this point I hit a mental
 // block and ran out of time as I was not sure yet how I would configure each
 // if-statement. Normally I would keep trying and experimenting until something
-// concrete came to mind. At this point, which was about 15 minutes, I made
-// some notes/drawings, which are shown at the end of this document.
+// concrete came to mind. At this point, which was about 15 minutes, I made some
+// notes/drawings, which are shown at the end of this document.
 //
 // When I wrote out my ideas on paper as instructed in step 4 (see
 // [Coding with Reflection assignment instructions](https://canvas.msstate.edu/courses/133359/assignments/1257462)),
@@ -51,7 +51,7 @@
 // <img style="border-style: ridge;" title="notes1.jpg" src="notes1.jpg" alt="" width="700" height="1200">
 // <img style="border-style: ridge;" title="notes2.jpg" src="notes2.jpg" alt="" width="700" height="1200">
 // <img style="border-style: ridge;" title="notes3.jpg" src="notes3.jpg" alt="" width="700" height="700">
-
+//
 // In this sketch, I realized what the math would look like or involve to find
 // the center of the “box”. This was the moment that I grasped it was just some
 // simple algebra.
@@ -64,10 +64,10 @@
 
 using namespace std;
 
-/**
- * Auto-generated code below aims at helping you parse
- * the standard input according to the problem statement.
- **/
+//
+// Auto-generated code below aims at helping you parse
+// the standard input according to the problem statement.
+//
 
 int main()
 {
@@ -79,19 +79,20 @@ int main()
     int x0;
     int y0;
     cin >> x0 >> y0; cin.ignore();
-
+    //
     // I was going to use a 2d array but decided not to as my way made more
     // sense to me. int array\[w\]\[h\] = {0};
-
+    //
     // These were used to track of where Batman was as well as configure the
     // boundaries for the box, which is explained further below.
     int x = x0;
     int y = y0;
-
-    // To keep track of the area that the bomb could be and couldn't, I kept
-    // track of box that would contain all potential poits that the bomb may be.
+    //
+    // To keep track of the area that the bomb could and could not be, I kept
+    // track of a box that would contain all potential points that the bomb may be.
     // Any point outside of the box that would slowly shrink were considered
     // void or not a possibility of containing the bomb.
+    // 
     int boxLeftSide = 0; // Left side of box
     int boxRightSide = w; // Right side of box
     int boxTopSide = 0; // Top side of box
@@ -169,4 +170,4 @@ int main()
         }
 
     }
-}
+} 
