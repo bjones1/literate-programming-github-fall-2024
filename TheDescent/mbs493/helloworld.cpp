@@ -1,7 +1,8 @@
 /* # The Descent */
 
-/* <a href="https://www.codingame.com/training/easy/the-descent" target="_blank" rel="noopener">Click
-   this to check out the game for yourself!</a> */
+/* Below is a link that will take you to the game website that is discussed in this file. My solution is explained and shown further down in the document.*/
+
+/* <a href="https://www.codingame.com/training/easy/the-descent" target="_blank" rel="noopener">The Descent game website link.</a> */
 
 /* ## Explanation of the game */
 
