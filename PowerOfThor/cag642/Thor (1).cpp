@@ -26,10 +26,7 @@ using namespace std;
 
 // We are shown the initial problem
 // [here.](https://www.codingame.com/training/easy/power-of-thor-episode-1)
-//
-// <span style="background-color: #f1c40f;">DH </span> : I can't see the
-// screenshot. <mark>CG: </mark> I will have to discuss this with Dr. Jones. I
-// fixed it, but it has disappeared again.
+
 
 // ![Thor_Screenshot2](Thor_Screenshot2.jpg)
 
@@ -66,10 +63,7 @@ int main()
     // ### Main Loop:
 
     while (1) {
-        // <span style="background-color: #f1c40f;">DH </span> : Indent your
-        // comments in while loop. The code needs to line up properly or it will
-        // fell off-putting. <mark>CG: </mark> Fixed
-      
+
 
 	    // This was given in the problem. It declares remaining_turns as a variable
 	    // and keeps track of how many remaining turns are left.
@@ -97,8 +91,7 @@ int main()
 	// initial Y position (Which we know he does) then he will move right one step
 	// and add 1 to his initial X position. This goes on until Thor reaches his
 	// destination.
-        // <span style="background-color: #f1c40f;">DH </span> : Decrease the
-        // indent for this line of code. <mark> CG: </mark> Fixed
+
 
         else if (light_x > initial_tx){
             cout << "E" << endl;
@@ -116,11 +109,5 @@ int main()
 
 	// [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 
-    // <span style="background-color: #f1c40f;">DH </span> : Overall, this meets
-    // the requirements. The variables have relevant names. There were no
-    // visible spelling mistakes, and the code reads well on both the IDE and
-    // Code Chat Editor. The paragraphs have a topic sentence, easy to follow,
-    // and clearly present the problem and the approach this programmer used to
-    // solve the problem.
-    
+
 }
