@@ -1,6 +1,11 @@
-// *RRC: I have completed the review of the following code. I found little to suggest changes on.  This reads very nicely on both VS and CCE.*<br>
-// *RRC: Line spacing issues can be fixed with < b r > times however many line breaks you want.*<br>
-// *RRC: My color coding is not working in CCE.  I am able to format and change the background color temporarily, but the changes do not stay.  I posted this question in Teams.*<br>
+// _RRC: I have completed the review of the following code. I found little to
+// suggest changes on. This reads very nicely on both VS and CCE._\
+// _RRC: Line spacing issues can be fixed with < b r > times however many line
+// breaks you want._\
+// _RRC: My color coding is not working in CCE. I am able to format and change
+// the background color temporarily, but the changes do not stay. I posted this
+// question in Teams._\
+//
 // # A program that resolves the "There is no spoon - Episode 1" problem from [Coding game website](https://www.codingame.com/home)
 //
 // RRC: There was an extra code block at line 2. Removed with //
@@ -22,7 +27,10 @@ class Player
         {
           
             // ### Get Input Details
-            // <br> RRC: Misspelled word on the next line fixed <br><br>
+            //
+            // \
+            // RRC: Misspelled word on the next line fixed\
+            // \
             /* _Get input details including width, height, and the lines. Use
                horizontal and vertical lines to store the input details for
                processing_ */
