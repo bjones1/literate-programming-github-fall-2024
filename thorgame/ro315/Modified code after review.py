@@ -32,10 +32,10 @@ while True:
     # Thor moves East or West depending on the position of `light_x` relative to
     # `initial_tx`.
     if light_x > initial_tx:
-    # Move East if the light is further right.
+        # Move East if the light is further
         direction_x = "E"  
     elif light_x < initial_tx: 
-     # Move West if the light is further left.
+        # Move West if the light is further left.
         direction_x = "W" 
     else:
      # No movement in the X direction if aligned.
@@ -49,29 +49,29 @@ while True:
     # Move South if the light is below Thor.
         direction_y = "S"  
     elif light_y < initial_ty:
-    # Move North if the light is above Thor.
+        # Move North if the light is above Thor.
         direction_y = "N"  
     else:
-     # No movement in the Y direction if aligned.
+        # No movement in the Y direction if aligned.
         direction_y = "" 
 
     # **Update Thor's Position** Update Thor's Y position if there is movement
     # in the Y direction.
     if direction_y != "":
         if direction_y == "S":
-        # Move South (increase Y).
+            # Move South (increase Y).
             initial_ty += 1  
         else:
-         # Move North (decrease Y).
+            # Move North (decrease Y).
             initial_ty -= 1 
 
     # Update Thor's X position if there is movement in the X direction.
     if direction_x != "":
         if direction_x == "E":
-        # Move East (increase X).
+            # Move East (increase X).
             initial_tx += 1  
         else:
-        # Move West (decrease X).
+            # Move West (decrease X).
             initial_tx -= 1  
 
     # **Output Direction** Output the combined direction for Thor's movement
