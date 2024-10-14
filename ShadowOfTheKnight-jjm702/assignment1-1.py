@@ -76,7 +76,20 @@ n = int(input())
 x0, y0 = [int(i) for i in input().split()]
 
 # #### Custom boundaries for search area
-xmin, xmax, ymin, ymax = 0, w - 1, 0, h - 1
+
+# #### The minimum x-coordinate is set to 0, representing the leftmost boundary of the grid where Batman can start searching.
+xmin = 0        
+
+# #### The maximum x-coordinate is set to w - 1, representing the rightmost boundary of the grid. The valid x-coordinates range from 0 to w - 1.
+xmax = w - 1    
+
+# #### The minimum y-coordinate is set to 0, representing the topmost boundary of the grid.
+ymin = 0        
+
+# #### The maximum y-coordinate is set to h - 1, representing the bottommost boundary of the grid. The valid y-coordinates range from 0 to h - 1.
+ymax = h - 1    
+
+
 
 # ### **Main Game Loop**
 
@@ -95,6 +108,8 @@ while True:
         xmin = x0 + 1
 
     # #### Update Batman's position to the middle of the new search area
+    # #### Integer division (// 2) is used to ensure Batman's position is a whole number, as grid coordinates must be integers.
+    # #### Floating-point division (/ 2) would result in a decimal value, which is not valid for grid coordinates.
     x0 = (xmin + xmax) // 2
     y0 = (ymin + ymax) // 2
 
