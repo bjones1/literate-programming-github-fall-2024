@@ -35,10 +35,13 @@
 #
 # ![Flowchart of Solution](./final_solution_flowchart.png)
 #
-# ## **Initialization**
-# Before diving into the loop, we need to initialize two variables:
+# ## **Initialization - Setting up Variables**
+# Before starting the loop, we initialize two critical variables. `max_height` 
+# is set to `-1` to ensure that any mountain height will be greater than this 
+# initial value. `max_index` is set to 0, as it will hold the index of the highest 
+# mountain as we process each input.
 #
-# Code Block
+### Code Block
 max_height = -1  # Initializing max_height to a value lower than any possible height.
 max_index = 0    # Initializing max_index to 0 to indicate the first mountain.
 #
