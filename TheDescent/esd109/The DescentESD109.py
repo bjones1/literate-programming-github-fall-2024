@@ -13,8 +13,9 @@
 # In order to pass each of these, a culmination of different types of loops and
 # if statements may be needed. Below is a simple diagram that I drew by hand
 # when I first began to solve this problem.
-# <span style="background-color: #2dc26b;">esd109:</span> Thank you for this
-# insight, I have changed my grammar and updated a few sentences accordingly.
+#
+# <span style="background-color: #2dc26b;">esd109:</span> I have changed
+# grammatical errors that were present above.
 
 
 
@@ -23,18 +24,12 @@
 
 # ## My solution code for the game is presented below.
 #
-# <span style="background-color: #2dc26b;">esd109:</span> Agreed on the spelling
-# corections and implemented.
-#
-# For the code in the game, I followed a simplistic approach to solving the
-# problem after becoming very frustrating with myself for not being able to
-# overcome it within an hour. The reason that I did this was I went on a pure
-# tangent trying to overcomplicate something that did not need to be
-# complicated!
+# <span style="background-color: #2dc26b;">esd109:</span> Spelling change has
+# been implemented to the word "presented" above.
 #
 # <span style="background-color: #2dc26b;">esd109:</span> This comment should
 # have been moved to the bottom in my reflections portion of the comments, I
-# have left it here and also copied it down to below.
+# have done so.
 import sys
 import math
 
@@ -67,6 +62,7 @@ while True:
             # This new maximum index, taken from above in line 68 and given a
             # value in maximum_index, is now set to the _I_ given in the current
             # time
+            #
             # <span style="background-color: #2dc26b;">esd109:</span> I have
             # changed the line numberings for the maximum index reference to
             # match the code in codechat editor and the IDE, however it changes
@@ -77,7 +73,7 @@ while True:
     # runs to show a visual representation of the ship blowing up mountains.
     print(maximum_index)
 
-# <span style="background-color: #2dc26b;">esd109:&nbsp;</span> Thank you,
+# <span style="background-color: #2dc26b;">esd109:</span> Thank you,
 # however it was to my understanding that the code had to be detailed in
 # comments in order to explain the thought process. While I agree that some
 # could have been moved separate and I have done so for a few of the lines of
@@ -91,4 +87,8 @@ while True:
 # process in the programmer tackling the problem. While multiple attempts could
 # be made and it each different case can be correct, the simplicity of it and
 # the ability for others to cohesively understand what the programmer did is the
-# main focus for taking in the thought process.
+# main focus for taking in the thought process. For the code in the game, I
+# followed a simplistic approach to solving the problem after becoming very
+# frustrating with myself for not being able to overcome it within an hour. The
+# reason that I did this was I went on a pure tangent trying to overcomplicate
+# something that did not need to be complicated!
