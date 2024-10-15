@@ -70,6 +70,16 @@ while True:
         initial_tx = initial_tx - 1
         print("SW")
 
+    elif initial_ty > light_y and initial_tx < light_x:
+        initial_ty = initial_ty - 1
+        initial_tx = initial_tx + 1
+        print("NE")
+    
+    elif initial_ty > light_y and initial_tx > light_x:
+        initial_ty = initial_ty - 1
+        initial_tx = initial_tx - 1
+        print("NW")
+
     elif initial_ty > light_y:
         initial_ty = initial_ty - 1
         print("N")
@@ -77,6 +87,10 @@ while True:
     elif initial_tx < light_x:
         initial_tx = initial_tx + 1
         print("E")
+
+    elif initial_ty < light_y:
+        initial_ty = initial_ty + 1
+        print("S")
 
     elif initial_tx > light_x:
         initial_tx = initial_tx - 1
