@@ -5,14 +5,14 @@
 # <h4>Written By: Sean B. Corby</h4>
 # <h4>ECE 4793/6793 - Literate Programming in Software Development</h4>
 # </div>
-
+#
 # ## **Problem Breakdown**
 # The goal of the puzzle is to identify the tallest mountain among eight and
 # output its index. We are using a **linear search algorithm** to find the
 # maximum height and its corresponding index. The solution is split into
 # sections for initialization, looping through the input, checking conditions,
 # and finally printing the result.
-
+#
 # ## **Linear Search Algorithm**
 # The **linear search algorithm** is a simple method for finding a particular
 # value (in this case, the maximum height) in a list of values (the mountain
@@ -20,7 +20,7 @@
 # and sequentially comparing each element to the current maximum value. If the
 # element being examined is larger than the current maximum, it updates the
 # maximum. The search continues until all elements have been checked.
-
+#
 # **Why Linear Search?**
 # 1. The list of mountain heights is small, with only eight elements, making
 #    the simplicity of linear search a good fit.
