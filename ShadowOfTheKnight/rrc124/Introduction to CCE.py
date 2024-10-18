@@ -5,7 +5,7 @@ import math
 # ## In this problem, Batman must find a bomb hidden in a building by using the least number of jumps.
 # My approach uses _binary search_ to minimize the number of guesses.
 # ---
-# ![Diagram illustrating the binary search process](CCE_Image.png)
+# ![Diagram illustrating the binary search process](images\CCE_Image.png)
 #
 # The following was pre-coded by
 # [Codingame](https://www.codingame.com/ide/puzzle/shadows-of-the-knight-episode-1)
@@ -53,4 +53,4 @@ while True:
 # **This is a snapshot of the game. Here we see batman finding and disarming a
 # bomb.** 
 #
-# ![Snapshot of Batman Finding Bombs](Game_Snapshot.png)
+# ![Snapshot of Batman Finding Bombs](images\Game_Snapshot.png)
