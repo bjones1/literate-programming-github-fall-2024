@@ -42,8 +42,10 @@
 # mountain as we process each input.
 #
 ### Code Block
-max_height = -1  # Initializing max_height to a value lower than any possible height.
-max_index = 0    # Initializing max_index to 0 to indicate the first mountain.
+# Initializing max_height to a value lower than any possible height.
+max_height = -1  
+# Initializing max_index to 0 to indicate the first mountain.
+max_index = 0    
 #
 # ## **Main Loop**
 # The main loop will iterate over the heights of all eight mountains provided in
@@ -55,12 +57,14 @@ while True:
     for i in range(8):
         # Read the height of the current mountain.
         mountain_h = int(input())  # Input the height of each mountain
-#       
+        #    
         # Condition Check
         if mountain_h > max_height:
-            max_height = mountain_h  # Updating the maximum height encountered so far.
-            max_index = i            # Storing the index of the tallest mountain.
-#    
+            # Updating the maximum height encountered so far.
+            max_height = mountain_h  
+            # Storing the index of the tallest mountain.
+            max_index = i            
+            #    
     # Result Output
     print(max_index)  # Output the index of the tallest mountain to be shot at.
 #
